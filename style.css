@@ -573,3 +573,79 @@ figcaption {
 
 .reveal .slides section.present .stagger > *:nth-child(5) { animation-delay: 0.52s; }
 .reveal .slides section.present .stagger > *:nth-child(6) { animation-delay: 0.59s; }
+
+
+/* Stability pass for export/render consistency */
+.slide-inner > *,
+.slide-inner main > *,
+.copy-column,
+.cover-copy { min-width: 0; }
+
+/* Slide 8 · Hollerith */
+.hollerith-layout {
+  grid-template-columns: 540px minmax(0, 1fr);
+  grid-template-areas:
+    "machine copy"
+    "flow flow";
+  gap: 36px 50px;
+  align-content: start;
+}
+.hollerith-layout .copy-column { grid-area: copy; }
+.hollerith-layout .machine-row { grid-area: machine; }
+.hollerith-layout .flow { grid-area: flow; order: initial; }
+
+.hollerith-layout .copy-column h2 {
+  max-width: 780px;
+  font-size: 74px;
+  line-height: .98;
+}
+
+.machine-row {
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 18px;
+  width: 100%;
+}
+.machine-row figure {
+  min-width: 0;
+  height: 230px;
+}
+.machine-row figure:nth-child(2) { width: auto; }
+
+/* Slide 9 · censo alemán */
+.risk-layout {
+  grid-template-columns: minmax(0, 0.93fr) minmax(0, 1.07fr);
+  grid-template-areas:
+    "copy photo"
+    "strip strip"
+    "caution caution";
+  gap: 28px 58px;
+  align-content: start;
+}
+.risk-layout .copy-column { grid-area: copy; }
+.risk-layout .wide-photo { grid-area: photo; margin: 0; }
+.risk-layout .risk-strip { grid-area: strip; margin-top: 2px; }
+.risk-layout .caution { grid-area: caution; margin-top: 0 !important; }
+
+/* Slide 11 · cronología normativa */
+.timeline-overview { gap: 22px; }
+.timeline-overview .copy-column { max-width: 1120px; }
+.timeline-overview .copy-column .body-copy {
+  max-width: 1120px;
+  margin-top: 18px !important;
+  font-size: 23px !important;
+  line-height: 1.28 !important;
+}
+.timeline-visual { height: 264px; }
+.mini-strip { gap: 14px; }
+.mini-strip article { padding: 16px 18px; }
+
+/* Compact secondary copy slightly so visual blocks remain inside 1600 × 900. */
+.mini-strip p,
+.constitution-card p,
+.evolution-track p,
+.framework-grid p,
+.status-grid article,
+.article-note {
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+}
