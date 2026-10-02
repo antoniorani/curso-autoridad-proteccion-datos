@@ -286,3 +286,290 @@ figcaption {
 @keyframes itemIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (prefers-reduced-motion: reduce) { .reveal .slides section.present * { animation: none !important; } }
+
+
+/* Slides 11-20 */
+.timeline-overview,
+.legal-hero,
+.constitution-layout,
+.treaty-layout,
+.schengen-layout,
+.evolution-layout,
+.charter-layout,
+.framework-layout,
+.ibero-layout,
+.modern-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-height: 0;
+}
+
+.timeline-overview .copy-column,
+.framework-layout .copy-column,
+.evolution-layout .copy-column { max-width: 1180px; }
+
+.timeline-visual,
+.legal-visual,
+.treaty-visual,
+.schengen-visual,
+.charter-visual,
+.ibero-visual,
+.modern-visual {
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid rgba(31,61,99,.08);
+  background: #fff;
+  box-shadow: 0 24px 68px rgba(31,61,99,.12);
+}
+
+.timeline-visual { height: 300px; }
+
+.timeline-visual svg,
+.legal-visual svg,
+.treaty-visual svg,
+.schengen-visual svg,
+.charter-visual svg,
+.ibero-visual svg,
+.modern-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mini-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.mini-strip.two-up-lite { grid-template-columns: repeat(2, 1fr); }
+
+.mini-strip article {
+  padding: 20px 22px;
+  border-top: 2px solid var(--line-strong);
+  border-radius: 0 0 22px 22px;
+  background: rgba(255,255,255,.45);
+}
+
+.mini-strip span,
+.evolution-track span,
+.framework-grid span,
+.status-grid span {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 820;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.mini-strip strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--blue-deep);
+  font-size: 22px;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+
+.mini-strip p,
+.constitution-card p,
+.evolution-track p,
+.framework-grid p {
+  margin: 8px 0 0 !important;
+  color: var(--muted);
+  font-size: 18px !important;
+  line-height: 1.28 !important;
+}
+
+.legal-hero,
+.treaty-layout,
+.charter-layout,
+.ibero-layout,
+.modern-layout {
+  display: grid;
+  grid-template-columns: 600px minmax(0, 1fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.legal-visual { height: 520px; }
+
+.treaty-visual,
+.charter-visual,
+.ibero-visual,
+.modern-visual { height: 470px; }
+
+.constitution-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 520px;
+  gap: 70px;
+  align-items: center;
+}
+
+.constitution-card {
+  padding: 34px 36px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(250,247,241,.92));
+  border: 1px solid rgba(31,61,99,.10);
+  box-shadow: 0 24px 68px rgba(31,61,99,.11);
+}
+
+.article-badge {
+  width: 108px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--red-soft);
+  color: var(--red);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  text-align: center;
+}
+
+.constitution-card h3 {
+  margin: 28px 0 14px !important;
+  font-size: 34px;
+}
+
+.article-pill-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.article-pill-row span,
+.chip-note span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  color: #9b7845;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.article-pill-row span {
+  background: rgba(31,61,99,.07);
+  color: var(--blue-deep);
+  font-size: 14px;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+.chip-note {
+  margin-top: 36px;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(31,61,99,.10);
+}
+
+.chip-note strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--blue-deep);
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -.04em;
+}
+
+.schengen-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 620px;
+  gap: 60px;
+  align-items: center;
+}
+
+.schengen-visual { height: 430px; }
+.schengen-cards article { min-height: 112px; }
+
+.evolution-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  position: relative;
+  padding-top: 28px;
+}
+
+.evolution-track::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(31,61,99,.22), rgba(199,71,86,.30));
+  border-radius: 999px;
+}
+
+.evolution-track article {
+  position: relative;
+  padding: 28px 24px 24px;
+  background: rgba(255,255,255,.55);
+  border-radius: 24px;
+  border: 1px solid rgba(31,61,99,.08);
+}
+
+.evolution-track article::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--slide);
+  border: 2px solid var(--red);
+}
+
+.evolution-track strong,
+.framework-grid strong,
+.status-grid strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--blue-deep);
+  font-size: 26px;
+  line-height: 1.14;
+  letter-spacing: -.035em;
+}
+
+.framework-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.framework-grid article,
+.status-grid article {
+  padding: 24px 24px 22px;
+  border-radius: 24px;
+  border-top: 2px solid rgba(199,71,86,.34);
+  background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(250,247,241,.82));
+  box-shadow: 0 18px 52px rgba(31,61,99,.08);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 38px;
+}
+
+.status-grid article {
+  min-height: 110px;
+  margin: 0 !important;
+  color: var(--muted);
+  font-size: 18px !important;
+  line-height: 1.28 !important;
+}
+
+.modern-layout { grid-template-columns: minmax(0, 1fr) 560px; }
+
+.reveal .slides section.present .stagger > *:nth-child(5) { animation-delay: 0.52s; }
+.reveal .slides section.present .stagger > *:nth-child(6) { animation-delay: 0.59s; }
