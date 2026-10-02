@@ -1,0 +1,3 @@
+// Auto-generated from source presentation media.
+module.exports = {
+  ASSETS: {"logo": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAADmCAYAAABYm7ViAADM3UlEQVR42uydd3xV9f3/n2fcnZ2QSQgJe++9QZmCintXxao/7dfaVmur1l1HraNurQO3CAqC7L33hrACIXuvm9x9z/n9ce+5BAghQLCO+...
