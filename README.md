@@ -1,23 +1,24 @@
-# Curso Autoridad Protección de Datos
+# Curso AEPD · Autoridades de control y CEPD
 
-Repositorio de la presentación del curso sobre autoridades de control, la AEPD y el Comité Europeo de Protección de Datos.
+Presentación web de las 10 primeras diapositivas del curso, preparada a partir de `Curso Sanidad 27 02 2025.pptx` y `Guion_revision_80_diapositivas_AEPD.docx`.
 
-## Generar las 10 primeras diapositivas
+## Ver la presentación
 
-```bash
-npm install
-npm run build
-```
+GitHub Pages:
 
-El PowerPoint se genera en:
+https://antoniorani.github.io/curso-autoridad-proteccion-datos/
 
-```text
-dist/aepd_antecedentes_01_10.pptx
-```
+La presentación está en `index.html`, con estilos en `style.css`, lienzo 16:9 y estética alineada con el template AEPD.
+
+## Navegación
+
+- Flecha derecha / Page Down / espacio: avanzar.
+- Flecha izquierda / Page Up: retroceder.
+- Home / End: primera o última diapositiva.
+- `S`: mostrar/ocultar notas de ponente.
+- Imprimir desde el navegador para exportar a PDF.
 
 ## Contenido incluido
-
-Esta primera entrega contiene las diapositivas 1 a 10, correspondientes al bloque de antecedentes:
 
 1. Portada
 2. Uno de los primeros tratamientos masivos de datos
@@ -26,8 +27,6 @@ Esta primera entrega contiene las diapositivas 1 a 10, correspondientes al bloqu
 5. Warren y Brandeis: *The Right to Privacy*
 6. Constitución de Weimar
 7. Telar de Jacquard
-8. Tabuladora Hollerith y censo de 1890
+8. Hollerith y el censo de 1890
 9. Censo alemán de 1933
 10. René Carmille y dimensión ética del tratamiento automatizado
-
-Cada diapositiva incluye notas del ponente.
