@@ -40,6 +40,11 @@ https://antoniorani.github.io/curso-autoridad-proteccion-datos/
 9. Censo alemán de 1933
 10. René Carmille y dimensión ética del tratamiento automatizado
 
+
+## Guía para futuras iteraciones
+
+Antes de rediseñar o ampliar diapositivas, consulta [`AGENTS.md`](./AGENTS.md). Ahí se fija la jerarquía entre el guion revisado y el PowerPoint original, el criterio para adaptar layouts al contenido, el uso de imágenes y las reglas específicas de las primeras 10 diapositivas.
+
 ## Regresiones
 
 Consulta `REGRESSIONS.md` antes de simplificar dependencias o cambiar el motor de presentación. Reveal.js debe permanecer local y la geometría de las slides debe seguir siendo 1600 × 900.
