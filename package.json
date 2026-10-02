@@ -1,0 +1,13 @@
+{
+  "name": "curso-autoridad-proteccion-datos",
+  "version": "0.1.0",
+  "description": "Diapositivas del curso sobre autoridades de control, AEPD y CEPD.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "node src/generate.js"
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}
