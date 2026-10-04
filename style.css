@@ -838,3 +838,204 @@ figcaption {
   top: -60px;
   object-fit: fill;
 }
+
+
+/* Slide 11 · cronología normativa 1890–2026 */
+.timeline-overview.timeline-2026 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.timeline-2026 .timeline-intro {
+  max-width: 1320px;
+}
+
+.timeline-2026 .timeline-intro .kicker {
+  margin-bottom: 10px !important;
+}
+
+.timeline-2026 .timeline-intro h2 {
+  max-width: 1260px;
+  font-size: 48px;
+  line-height: 1.02;
+  letter-spacing: -0.048em;
+}
+
+.timeline-2026 .timeline-intro .body-copy {
+  max-width: 1260px;
+  margin-top: 14px !important;
+  font-size: 20px !important;
+  line-height: 1.28 !important;
+}
+
+.timeline-phases {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  min-height: 0;
+}
+
+.timeline-phases::before {
+  content: "";
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 33px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(31,61,99,.22), rgba(199,71,86,.34), rgba(167,131,79,.34));
+  z-index: 0;
+}
+
+.timeline-phase {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 282px;
+  padding: 18px 18px 16px;
+  overflow: hidden;
+  border: 1px solid rgba(31,61,99,.10);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(250,247,241,.88));
+  box-shadow: 0 18px 48px rgba(31,61,99,.08);
+}
+
+.timeline-phase::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 5px;
+  background: var(--blue);
+}
+
+.timeline-phase.phase-laws::after { background: var(--gold); }
+.timeline-phase.phase-right::after { background: var(--red); }
+.timeline-phase.phase-system::after { background: linear-gradient(90deg, var(--red), var(--yellow)); }
+
+.phase-heading {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 58px;
+}
+
+.phase-number {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--blue-deep);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: .06em;
+  box-shadow: 0 8px 20px rgba(31,61,99,.16);
+}
+
+.phase-laws .phase-number { background: var(--gold); }
+.phase-right .phase-number { background: var(--red); }
+.phase-system .phase-number { background: #8f6335; }
+
+.phase-range {
+  margin: 0 0 3px !important;
+  color: var(--muted);
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.timeline-phase h3 {
+  color: var(--blue-deep);
+  font-size: 25px;
+  line-height: 1.03;
+  letter-spacing: -.035em;
+}
+
+.phase-events {
+  display: grid;
+  gap: 0;
+  margin-top: 13px;
+  border-top: 1px solid var(--line);
+}
+
+.phase-events p {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 8px;
+  margin: 0 !important;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(31,61,99,.08);
+  line-height: 1.18 !important;
+}
+
+.phase-events strong {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: -.01em;
+}
+
+.phase-laws .phase-events strong { color: #8a6a3e; }
+.phase-events span {
+  color: var(--blue-deep);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.phase-takeaway {
+  margin: auto 0 0 !important;
+  padding-top: 11px;
+  color: var(--muted);
+  font-size: 14px !important;
+  line-height: 1.22 !important;
+  font-weight: 520;
+}
+
+.timeline-direction {
+  display: grid;
+  grid-template-columns: auto minmax(30px,1fr) auto minmax(30px,1fr) auto minmax(30px,1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 14px;
+  border-radius: 18px;
+  background: rgba(31,61,99,.045);
+  border: 1px solid rgba(31,61,99,.08);
+}
+
+.timeline-direction span {
+  color: var(--blue-deep);
+  font-size: 12px;
+  font-weight: 820;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+.timeline-direction i {
+  position: relative;
+  display: block;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(31,61,99,.28), rgba(199,71,86,.48));
+}
+
+.timeline-direction i::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid var(--red);
+  border-right: 2px solid var(--red);
+  transform: translateY(-50%) rotate(45deg);
+}
