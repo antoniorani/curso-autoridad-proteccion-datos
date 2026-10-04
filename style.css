@@ -1039,3 +1039,64 @@ figcaption {
   border-right: 2px solid var(--red);
   transform: translateY(-50%) rotate(45deg);
 }
+
+
+/* Slides 12, 14 y 15 · revisión visual */
+.rights12-visual,
+.convention108-visual,
+.schengen2026-visual {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.rights12-visual {
+  height: 420px;
+}
+
+section[data-title="DUDH · artículo 12"] .legal-hero {
+  grid-template-columns: 620px minmax(0, 1fr);
+  gap: 64px;
+}
+
+section[data-title="DUDH · artículo 12"] .copy-column h2 {
+  max-width: 760px;
+  font-size: 56px;
+}
+
+section[data-title="Convenio 108"] .treaty-layout {
+  grid-template-columns: 650px minmax(0, 1fr);
+  gap: 62px;
+}
+
+.convention108-visual {
+  height: 410px;
+}
+
+section[data-title="Convenio 108"] .copy-column h2 {
+  font-size: 53px;
+  line-height: 1;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-layout {
+  grid-template-columns: minmax(0, 1fr) 650px;
+  gap: 52px;
+}
+
+.schengen2026-visual {
+  height: 402px;
+}
+
+section[data-title="Acuerdo de Schengen"] .copy-column h2 {
+  font-size: 54px;
+  line-height: 1;
+}
+
+section[data-title="Acuerdo de Schengen"] .concept-row {
+  margin-top: 28px;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-cards article {
+  min-height: 96px;
+  padding: 18px 18px 16px;
+}
