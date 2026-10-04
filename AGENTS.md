@@ -112,7 +112,22 @@ Mantener:
 
 Si un contenido no cabe, **simplificar o cambiar de layout**; no reducir indiscriminadamente la tipografía ni convertir la slide en una página web desplazable.
 
-## 8. Checklist antes de dar una iteración por terminada
+## 8. Regla obligatoria para gráficos y desbordes
+
+Todo gráfico SVG nuevo o rehecho debe usar la clase `safe-diagram`.
+
+Además:
+
+- cualquier texto largo o relevante dentro del SVG debe llevar `data-fit-width` con el ancho máximo disponible y, cuando proceda, `data-min-font-size`;
+- en tarjetas SVG con un `<rect>` como fondo, el helper de `index.html` puede inferir el ancho disponible automáticamente, pero los títulos largos deben declarar igualmente su ancho de forma explícita;
+- preferir etiquetas breves y dividir el contenido en varias líneas antes que comprimir excesivamente una frase;
+- no usar una reducción automática de tipografía como sustituto de una mala composición: si el texto necesita bajar de aproximadamente el 75 % de su tamaño previsto, simplificar el texto o rediseñar el bloque;
+- todo SVG debe quedar visualmente dentro de su panel con `overflow: hidden`;
+- antes de cerrar una iteración, revisar especialmente títulos, etiquetas centradas, pies de gráfico y tarjetas estrechas a 1600 × 900.
+
+La función `fitSvgDiagramText()` de `index.html` es una salvaguarda final: reduce el texto hasta el mínimo permitido y, solo si aún no cabe, aplica `textLength` para impedir que se salga físicamente del bloque.
+
+## 9. Checklist antes de dar una iteración por terminada
 
 Para cada diapositiva revisada comprobar:
 
@@ -127,7 +142,7 @@ Para cada diapositiva revisada comprobar:
 - ¿La slide funciona a 1600 × 900 sin desbordes ni texto minúsculo?
 - ¿Se ha respetado el sentido del guion y, cuando procede, sus correcciones/actualizaciones?
 
-## 9. Principio general
+## 10. Principio general
 
 **Conservar el sistema visual; rediseñar la comunicación.**
 
