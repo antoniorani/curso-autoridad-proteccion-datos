@@ -1433,3 +1433,14 @@ section[data-title="Convenio 108+"] .status-grid strong {
   line-height: 1.08;
   overflow-wrap: anywhere;
 }
+
+
+/* Reusable guard for authored SVG diagrams.
+   Use class="safe-diagram"; JS enforces card/text width contracts after fonts load. */
+svg.safe-diagram {
+  overflow: hidden;
+}
+
+svg.safe-diagram text {
+  text-rendering: geometricPrecision;
+}
