@@ -717,3 +717,71 @@ figcaption {
   height: 310px;
   padding: 14px;
 }
+
+
+/* Uploaded slide imagery · October 2026 */
+.photo-panel.tall img {
+  object-fit: contain;
+  padding: 16px;
+  background: #fff;
+}
+
+.image-collage img {
+  object-fit: contain;
+  padding: 8px;
+  background: #fff;
+}
+
+.document-stack.single-document {
+  position: relative;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.document-stack.single-document .doc-single {
+  position: static;
+  width: 360px;
+  height: 440px;
+  padding: 22px;
+}
+.document-stack.single-document .doc-single img {
+  object-fit: contain;
+}
+
+.photo-panel.machine img {
+  object-fit: contain;
+}
+
+.machine-row.uploaded-pair {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.machine-row.uploaded-pair figure {
+  height: 280px;
+  padding: 12px;
+}
+.machine-row.uploaded-pair img {
+  object-fit: contain;
+}
+
+.risk-photo-pair {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 14px;
+  padding: 14px;
+}
+.risk-photo-pair img {
+  min-width: 0;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.portrait-panel.uploaded-carmille {
+  height: 440px;
+  padding: 18px;
+  background: #fff;
+}
+.portrait-panel.uploaded-carmille img {
+  object-fit: contain;
+}
