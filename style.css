@@ -1241,3 +1241,94 @@ section[data-title="Acuerdo de Schengen"] .schengen-cards strong {
 section[data-title="Acuerdo de Schengen"] .schengen-cards span {
   font-size: 11px;
 }
+
+
+/* Slide 15 · final clean fit */
+section[data-title="Acuerdo de Schengen"] .schengen-layout {
+  grid-template-columns: minmax(0, 1fr) 620px;
+  gap: 44px;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-clean {
+  height: 382px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-clean svg {
+  overflow: hidden;
+}
+
+section[data-title="Acuerdo de Schengen"] .copy-column h2 {
+  font-size: 47px;
+  line-height: 1.02;
+}
+
+section[data-title="Acuerdo de Schengen"] .copy-column .body-copy {
+  font-size: 20px !important;
+  line-height: 1.24 !important;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-cards article {
+  min-width: 0;
+  min-height: 78px;
+  padding: 12px 12px 11px;
+  overflow: hidden;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-cards strong {
+  font-size: 17px;
+  line-height: 1.05;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+section[data-title="Acuerdo de Schengen"] .schengen-cards span {
+  font-size: 10px;
+}
+
+/* Slide 17 · Carta UE, graphic rebuilt for clean fit */
+section[data-title="Carta de Derechos Fundamentales de la UE"] .charter-layout {
+  grid-template-columns: 640px minmax(0, 1fr);
+  gap: 58px;
+}
+
+section[data-title="Carta de Derechos Fundamentales de la UE"] .charter17-clean {
+  height: 420px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+section[data-title="Carta de Derechos Fundamentales de la UE"] .charter17-clean svg {
+  overflow: hidden;
+}
+
+section[data-title="Carta de Derechos Fundamentales de la UE"] .copy-column h2 {
+  font-size: 51px;
+  line-height: 1.01;
+}
+
+section[data-title="Carta de Derechos Fundamentales de la UE"] .copy-column .body-copy {
+  font-size: 20px !important;
+  line-height: 1.24 !important;
+}
+
+section[data-title="Carta de Derechos Fundamentales de la UE"] .chip-note {
+  margin-top: 26px;
+  padding: 20px 22px;
+}
+
+section[data-title="Carta de Derechos Fundamentales de la UE"] .chip-note strong {
+  font-size: 24px;
+  line-height: 1.12;
+}
