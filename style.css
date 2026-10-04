@@ -786,7 +786,6 @@ figcaption {
   object-fit: contain;
 }
 
-
 /* Fix slides 7–8 · crop EMF rasterization artefacts and match source proportions */
 .jacquard-layout .photo-panel.machine {
   position: relative;
@@ -805,32 +804,37 @@ figcaption {
 }
 
 .hollerith-layout .machine-row.uploaded-pair {
-  grid-template-columns: 44% 56%;
+  grid-template-columns: 58fr 42fr;
   gap: 14px;
   align-items: center;
 }
 .hollerith-layout .machine-row.uploaded-pair figure {
   position: relative;
-  height: 205px;
   padding: 0;
   overflow: hidden;
   background: #fff;
 }
+.hollerith-layout .machine-row.uploaded-pair figure:first-child {
+  height: 260px;
+}
+.hollerith-layout .machine-row.uploaded-pair figure:nth-child(2) {
+  height: 150px;
+}
 .hollerith-layout .machine-row.uploaded-pair figure:first-child img {
   position: absolute;
-  width: 361px;
-  height: 325px;
+  width: 458px;
+  height: 413px;
   max-width: none;
-  left: -61px;
-  top: -61px;
+  left: -77px;
+  top: -78px;
   object-fit: fill;
 }
 .hollerith-layout .machine-row.uploaded-pair figure:nth-child(2) img {
   position: absolute;
-  width: 683px;
-  height: 430px;
+  width: 500px;
+  height: 315px;
   max-width: none;
-  left: -75px;
-  top: -81px;
+  left: -55px;
+  top: -60px;
   object-fit: fill;
 }
