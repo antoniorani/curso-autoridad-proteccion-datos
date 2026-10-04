@@ -785,3 +785,56 @@ figcaption {
 .portrait-panel.uploaded-carmille img {
   object-fit: contain;
 }
+
+/* Fix slides 7–8 · crop EMF rasterization artefacts and match source proportions */
+.jacquard-layout .photo-panel.machine {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+.jacquard-layout .photo-panel.machine img {
+  position: absolute;
+  width: 1445px;
+  height: 1196px;
+  max-width: none;
+  left: -193px;
+  top: -193px;
+  object-fit: fill;
+}
+
+.hollerith-layout .machine-row.uploaded-pair {
+  grid-template-columns: 58fr 42fr;
+  gap: 14px;
+  align-items: center;
+}
+.hollerith-layout .machine-row.uploaded-pair figure {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+.hollerith-layout .machine-row.uploaded-pair figure:first-child {
+  height: 260px;
+}
+.hollerith-layout .machine-row.uploaded-pair figure:nth-child(2) {
+  height: 150px;
+}
+.hollerith-layout .machine-row.uploaded-pair figure:first-child img {
+  position: absolute;
+  width: 458px;
+  height: 413px;
+  max-width: none;
+  left: -77px;
+  top: -78px;
+  object-fit: fill;
+}
+.hollerith-layout .machine-row.uploaded-pair figure:nth-child(2) img {
+  position: absolute;
+  width: 500px;
+  height: 315px;
+  max-width: none;
+  left: -55px;
+  top: -60px;
+  object-fit: fill;
+}
