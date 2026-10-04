@@ -669,7 +669,7 @@
           <header class="topbar"><div class="brand"><img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" /></div><p>2017 · convergencia iberoamericana</p></header>
           <main class="ibero-layout">
             <figure class="ibero-visual ibero19-clean reveal-block">
-              <svg viewBox="0 0 760 470" role="img" aria-label="Objetivos de los Estándares Iberoamericanos de Protección de Datos">
+              <svg class="safe-diagram" viewBox="0 0 760 470" role="img" aria-label="Objetivos de los Estándares Iberoamericanos de Protección de Datos">
                 <rect width="760" height="470" rx="34" fill="#ffffff"/>
                 <rect x="28" y="28" width="704" height="414" rx="28" fill="#fbf8f2" stroke="#e8dfd1"/>
                 <g font-family="Inter,Arial">
@@ -734,7 +734,7 @@
           <main class="modern-layout">
             <div class="copy-column"><p class="kicker">Convenio 108 modernizado</p><h2>El Convenio 108+ actualiza el instrumento internacional, pero aún no ha entrado en vigor.</h2><p class="body-copy">La modernización refuerza principios, transparencia y circulación internacional de datos. Según el guion, en octubre de 2026 todavía faltan ratificaciones para su entrada en vigor.</p><div class="status-grid reveal-block stagger"><article><span>Situación</span><strong>No vigente aún</strong></article><article><span>Ratificaciones</span><strong>34 / 38</strong></article><article><span>Último dato del guion</span><strong>Moldavia fue la nº 34</strong></article></div></div>
             <figure class="modern-visual modern20-clean reveal-block">
-              <svg viewBox="0 0 760 470" role="img" aria-label="Evolución del Convenio 108 al Convenio 108+ y estado de ratificación en 2026">
+              <svg class="safe-diagram" viewBox="0 0 760 470" role="img" aria-label="Evolución del Convenio 108 al Convenio 108+ y estado de ratificación en 2026">
                 <rect width="760" height="470" rx="34" fill="#ffffff"/>
                 <rect x="28" y="28" width="704" height="414" rx="28" fill="#fbf8f2" stroke="#e8dfd1"/>
                 <g font-family="Inter,Arial">
@@ -853,13 +853,39 @@
     // Mark any potentially long <text> with data-fit-width="N".
     // The text is reduced only as much as necessary; if it still cannot fit,
     // SVG textLength is used as a final hard stop so it never leaves its box.
+    function inferredSvgTextWidth(el) {
+      const explicitWidth = Number.parseFloat(el.dataset.fitWidth);
+      if (Number.isFinite(explicitWidth) && explicitWidth > 0) return explicitWidth;
+
+      const group = el.parentElement;
+      if (!group || group.tagName.toLowerCase() !== "g") return null;
+
+      const rect = Array.from(group.children).find((child) => child.tagName?.toLowerCase() === "rect");
+      if (!rect) return null;
+
+      const rectX = Number.parseFloat(rect.getAttribute("x") || "0");
+      const rectWidth = Number.parseFloat(rect.getAttribute("width") || "0");
+      const textX = Number.parseFloat(el.getAttribute("x") || "0");
+      if (![rectX, rectWidth, textX].every(Number.isFinite) || rectWidth <= 0) return null;
+
+      const padding = Number.parseFloat(el.dataset.fitPadding || "12");
+      const anchor = el.getAttribute("text-anchor") || "start";
+      if (anchor === "middle") {
+        return Math.max(0, 2 * Math.min(textX - rectX, rectX + rectWidth - textX) - (2 * padding));
+      }
+      if (anchor === "end") {
+        return Math.max(0, textX - rectX - padding);
+      }
+      return Math.max(0, (rectX + rectWidth) - textX - padding);
+    }
+
     function fitSvgDiagramText(root = document) {
-      root.querySelectorAll('svg text[data-fit-width]').forEach((el) => {
-        const maxWidth = Number.parseFloat(el.dataset.fitWidth);
+      root.querySelectorAll('svg.safe-diagram text').forEach((el) => {
+        const maxWidth = inferredSvgTextWidth(el);
         if (!Number.isFinite(maxWidth) || maxWidth <= 0 || typeof el.getComputedTextLength !== "function") return;
 
         const declaredSize = Number.parseFloat(el.dataset.fitBaseSize || el.getAttribute("font-size") || "16");
-        const minSize = Number.parseFloat(el.dataset.minFontSize || "10");
+        const minSize = Number.parseFloat(el.dataset.minFontSize || Math.max(10, declaredSize * 0.76));
         if (!Number.isFinite(declaredSize) || declaredSize <= 0) return;
 
         if (!el.dataset.fitBaseSize) el.dataset.fitBaseSize = String(declaredSize);
