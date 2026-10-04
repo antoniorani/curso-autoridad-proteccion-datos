@@ -448,8 +448,8 @@
   <script>
     const b64Assets = {
       cover: ["assets/data/cover-2026-00.txt","assets/data/cover-2026-01.txt","assets/data/cover-2026-02.txt","assets/data/cover-2026-03.txt","assets/data/cover-2026-04.txt","assets/data/cover-2026-05.txt","assets/data/cover-2026-06.txt","assets/data/cover-2026-07.txt","assets/data/cover-2026-08.txt","assets/data/cover-2026-09.txt"],
-      census: ["assets/data/census-0.txt"],
-      sprite: ["assets/data/sprite-0.txt","assets/data/sprite-1.txt","assets/data/sprite-2.txt","assets/data/sprite-3.txt"]
+      census: ["assets/data/fixed-census-00.txt","assets/data/fixed-census-01.txt","assets/data/fixed-census-02.txt"],
+      sprite: ["assets/data/fixed-sprite-00.txt","assets/data/fixed-sprite-01.txt","assets/data/fixed-sprite-02.txt","assets/data/fixed-sprite-03.txt","assets/data/fixed-sprite-04.txt","assets/data/fixed-sprite-05.txt","assets/data/fixed-sprite-06.txt","assets/data/fixed-sprite-07.txt"]
     };
     async function loadB64Asset(parts) {
       const chunks = await Promise.all(parts.map(async (path) => {
@@ -459,15 +459,26 @@
       }));
       return "data:image/webp;base64," + chunks.join("");
     }
-    Promise.all([
-      loadB64Asset(b64Assets.cover),
-      loadB64Asset(b64Assets.census),
-      loadB64Asset(b64Assets.sprite)
-    ]).then(([cover, census, sprite]) => {
+    async function applyB64Asset(parts, apply, label) {
+      try {
+        const dataUrl = await loadB64Asset(parts);
+        apply(dataUrl);
+      } catch (error) {
+        console.error("Error cargando " + label + ":", error);
+      }
+    }
+
+    applyB64Asset(b64Assets.cover, (cover) => {
       document.querySelectorAll('[data-b64="cover"]').forEach((el) => { el.src = cover; });
+    }, "la portada");
+
+    applyB64Asset(b64Assets.census, (census) => {
       document.querySelectorAll('[data-b64="census"]').forEach((el) => { el.src = census; });
+    }, "la imagen del censo");
+
+    applyB64Asset(b64Assets.sprite, (sprite) => {
       document.documentElement.style.setProperty("--ppt-sprite-image", 'url("' + sprite + '")');
-    }).catch((error) => console.error("Error cargando imágenes de la presentación:", error));
+    }, "las imágenes del PowerPoint");
   </script>
 
   <script src="vendor/reveal/reveal.js"></script>
