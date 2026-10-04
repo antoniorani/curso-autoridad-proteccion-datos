@@ -210,7 +210,7 @@
 
     const style = document.createElement("style");
     style.id = EXTRA_31_40_ID;
-    style.textContent = \`
+    style.textContent = `
       .authority31-layout,
       .authority32-layout,
       .authority34-layout,
@@ -483,10 +483,10 @@
       .authority38-layout .micro-grid strong {
         font-size: 16px;
       }
-    \`;
+    `;
     document.head.appendChild(style);
 
-    const html = \`
+    const html = `
       <section class="slide-page" data-title="Competencia · artículo 55 RGPD" data-background-color="#fffdf9">
         <div class="slide-inner">
           <header class="topbar"><div class="brand"><img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" /></div><p>Artículo 55 · competencia territorial</p></header>
@@ -864,7 +864,7 @@
         </div>
         <aside class="notes">Explicar que el Título VII de la LOPDGDD desarrolla la posición institucional de la AEPD: naturaleza de autoridad administrativa independiente, estructura, relación con otros poderes públicos, representación española en el CEPD, presupuesto, personal y potestades de investigación. El esquema se ha actualizado conforme al organigrama oficial vigente en 2026: Presidencia, Adjuntía, Consejo Consultivo, Subdirección General de Inspección de Datos, Subdirección General de Promoción y Autorizaciones, Secretaría General y Servicio Jurídico.</aside>
       </section>
-    \`;
+    `;
 
     root.insertAdjacentHTML("beforeend", html);
   }
