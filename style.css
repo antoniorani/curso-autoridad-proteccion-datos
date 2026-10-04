@@ -1172,7 +1172,7 @@ section[data-title="Acuerdo de Schengen"] .schengen-cards article {
 section[data-title="DUDH · artículo 12"] .rights12-visual svg,
 section[data-title="Convenio 108"] .convention108-visual svg,
 section[data-title="Acuerdo de Schengen"] .schengen2026-visual svg {
-  overflow: visible;
+  overflow: hidden;
 }
 
 section[data-title="DUDH · artículo 12"] .copy-column h2 {
