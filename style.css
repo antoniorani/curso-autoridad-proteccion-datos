@@ -1332,3 +1332,104 @@ section[data-title="Carta de Derechos Fundamentales de la UE"] .chip-note strong
   font-size: 24px;
   line-height: 1.12;
 }
+
+
+/* Slides 19–20 · visual cleanup */
+section[data-title="Estándares Iberoamericanos"] .ibero-layout {
+  grid-template-columns: 650px minmax(0, 1fr);
+  gap: 54px;
+}
+
+section[data-title="Estándares Iberoamericanos"] .ibero19-clean {
+  height: 408px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+section[data-title="Estándares Iberoamericanos"] .ibero19-clean svg {
+  overflow: hidden;
+}
+
+section[data-title="Estándares Iberoamericanos"] .copy-column h2 {
+  font-size: 49px;
+  line-height: 1.01;
+}
+
+section[data-title="Estándares Iberoamericanos"] .copy-column .body-copy {
+  font-size: 20px !important;
+  line-height: 1.24 !important;
+}
+
+section[data-title="Estándares Iberoamericanos"] .mini-strip {
+  gap: 12px;
+  margin-top: 24px;
+}
+
+section[data-title="Estándares Iberoamericanos"] .mini-strip article {
+  min-width: 0;
+  padding: 14px 16px;
+}
+
+section[data-title="Estándares Iberoamericanos"] .mini-strip strong {
+  font-size: 19px;
+  line-height: 1.08;
+}
+
+section[data-title="Estándares Iberoamericanos"] .mini-strip p {
+  font-size: 14px !important;
+  line-height: 1.18 !important;
+}
+
+/* Slide 20 · distinguish Convention 108 from the modernization protocol */
+section[data-title="Convenio 108+"] .modern-layout {
+  grid-template-columns: minmax(0, 1fr) 640px;
+  gap: 48px;
+}
+
+section[data-title="Convenio 108+"] .modern20-clean {
+  height: 410px;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+section[data-title="Convenio 108+"] .modern20-clean svg {
+  overflow: hidden;
+}
+
+section[data-title="Convenio 108+"] .copy-column h2 {
+  font-size: 48px;
+  line-height: 1.01;
+}
+
+section[data-title="Convenio 108+"] .copy-column .body-copy {
+  font-size: 19px !important;
+  line-height: 1.22 !important;
+}
+
+section[data-title="Convenio 108+"] .status-grid {
+  gap: 10px;
+  margin-top: 24px;
+}
+
+section[data-title="Convenio 108+"] .status-grid article {
+  min-width: 0;
+  min-height: 82px;
+  padding: 14px 14px 12px;
+  overflow: hidden;
+}
+
+section[data-title="Convenio 108+"] .status-grid span {
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+section[data-title="Convenio 108+"] .status-grid strong {
+  margin-top: 7px;
+  font-size: 18px;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
