@@ -111,18 +111,8 @@
 
     root.insertAdjacentHTML("beforeend", html);
     if (window.fitSvgDiagramText) window.fitSvgDiagramText(root);
-    if (window.Reveal) {
-      if (typeof Reveal.sync === "function") Reveal.sync();
-      if (typeof Reveal.layout === "function") Reveal.layout();
-    }
   }
 
-  // All slide blocks are loaded in numerical script order.
-  // Inject 51–60 at DOMContentLoaded just like 41–50, 61–70 and 71–80,
-  // so later blocks cannot occupy their slide numbers first.
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", injectSlides51To60, { once:true });
-  } else {
-    injectSlides51To60();
-  }
+  if (document.querySelector(".reveal .slides")) injectSlides51To60();
+  else document.addEventListener("DOMContentLoaded", injectSlides51To60, { once:true });
 })();
