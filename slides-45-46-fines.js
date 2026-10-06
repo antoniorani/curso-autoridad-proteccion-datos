@@ -72,9 +72,8 @@
     });
     after.insertAdjacentHTML("afterend", s45 + s46);
     if(window.fitSvgDiagramText) window.fitSvgDiagramText(root);
-    if(window.Reveal){ if(typeof Reveal.sync === "function") Reveal.sync(); if(typeof Reveal.layout === "function") Reveal.layout(); }
   }
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", injectFinesSlides, {once:true});
-  else injectFinesSlides();
+  if (document.querySelector('.reveal .slides > section[data-title="Poderes de la AEPD"]')) injectFinesSlides();
+  else document.addEventListener("DOMContentLoaded", injectFinesSlides, { once:true });
 })();
