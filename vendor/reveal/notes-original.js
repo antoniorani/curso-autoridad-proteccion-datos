@@ -1,5 +1,7 @@
 (() => {
   "use strict";
+  // Load-order contract: speaker-gallery.js has already appended slides 21–40.
+  // These scripts append 41–82 synchronously before Reveal.initialize().
   document.write('<script src="vendor/reveal/notes-core.js"><\/script>');
   document.write('<script src="slides-41-50.js"><\/script>');
   document.write('<script src="slides-45-46-fines.js"><\/script>');
