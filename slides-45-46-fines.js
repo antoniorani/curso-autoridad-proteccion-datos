@@ -71,10 +71,7 @@
       notes:"Gráfico de principales multas de la AEPD: Amadeus 18 M€, Google LLC 10 M€, Aena 10 M€, Vodafone 8,15 M€, CaixaBank 6 M€ y BBVA 5 M€. La marca ↔ se usa para casos con dimensión transnacional o internacional: Amadeus por cooperación Art. 60, Google por entidad no española/transferencias a Lumen, Vodafone por transferencia internacional a Perú detectada en el expediente. Fuentes de apoyo: AEPD, EDPB, BOE, Aena, Data Protection Report, CMS/GDPR fine trackers."
     });
     after.insertAdjacentHTML("afterend", s45 + s46);
-    if(window.fitSvgDiagramText) window.fitSvgDiagramText(root);
-    if(window.Reveal){ if(typeof Reveal.sync === "function") Reveal.sync(); if(typeof Reveal.layout === "function") Reveal.layout(); }
   }
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", injectFinesSlides, {once:true});
-  else injectFinesSlides();
+  injectFinesSlides();
 })();

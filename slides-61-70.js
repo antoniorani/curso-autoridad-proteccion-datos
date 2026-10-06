@@ -60,6 +60,5 @@
     root.insertAdjacentHTML("beforeend", [s61,s62,s63,s64,s65,s66,s67,s68,s69,s70].join(""));
   }
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", injectSlides61To70, { once:true });
-  else injectSlides61To70();
+  injectSlides61To70();
 })();

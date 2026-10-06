@@ -51,10 +51,7 @@
       <main class="edpb50-transition"><div class="copy-column"><p class="kicker">Del sistema español al europeo</p><h2>El Comité Europeo de Protección de Datos</h2><p class="body-copy">Tras la AEPD, el curso cambia de escala: de la autoridad estatal y la coordinación interna al órgano europeo que garantiza cooperación y coherencia.</p></div><div class="edpb50-card reveal-block"><span>Bloque IV</span><strong>Cooperación, coherencia y criterios comunes</strong><p>El CEPD conecta a las autoridades nacionales, al SEPD y a la arquitectura europea de protección de datos.</p><div class="mini"><b>Miembros</b><b>Funciones</b><b>Decisiones</b></div></div></main></div><aside class="notes">Usar esta diapositiva como transición visual hacia el Comité Europeo de Protección de Datos. El objetivo no es desarrollar todavía sus funciones, sino marcar el cambio de escala: de la AEPD y las autoridades españolas al sistema europeo de cooperación y coherencia.</aside></section>`;
 
     root.insertAdjacentHTML("beforeend", [s41,s42,s43,s44,s45,s46,s47,s48,s49,s50].join(""));
-    if (window.fitSvgDiagramText) window.fitSvgDiagramText(root);
-    if (window.Reveal) { if (typeof Reveal.sync === "function") Reveal.sync(); if (typeof Reveal.layout === "function") Reveal.layout(); }
   }
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", injectSlides41To50, {once:true});
-  else injectSlides41To50();
+  injectSlides41To50();
 })();
