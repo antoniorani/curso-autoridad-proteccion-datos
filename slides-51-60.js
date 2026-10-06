@@ -110,9 +110,7 @@
     `;
 
     root.insertAdjacentHTML("beforeend", html);
-    if (window.fitSvgDiagramText) window.fitSvgDiagramText(root);
   }
 
-  if (document.querySelector(".reveal .slides")) injectSlides51To60();
-  else document.addEventListener("DOMContentLoaded", injectSlides51To60, { once:true });
+  injectSlides51To60();
 })();
