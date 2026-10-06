@@ -539,7 +539,7 @@
             </figure>
           </main>
         </div>
-        <aside class="notes">Explicar que la autoridad ejerce sus funciones y poderes en su territorio, con reglas específicas para tratamientos de autoridades públicas y determinadas misiones de interés público. Subrayar la excepción relativa a tratamientos realizados por tribunales en el ejercicio de su función judicial.</aside>
+        <aside class="notes"><p>Después de ver cómo se crea una autoridad, la siguiente pregunta es bastante natural: ¿hasta dónde puede actuar? El artículo 55 parte de una regla sencilla: cada autoridad ejerce sus funciones y poderes dentro de su ámbito territorial.</p><p>Pero enseguida aparecen matices, especialmente cuando hablamos de autoridades públicas, misiones de interés público o tratamientos que pueden afectar a varios Estados.</p><p><strong>La competencia de una autoridad no depende solo de dónde esté físicamente un servidor o una empresa, sino de las reglas que el RGPD establece para repartir la supervisión.</strong> Y hay una excepción importante: los tratamientos realizados por los tribunales cuando actúan en su función judicial. <strong>Esta distribución de competencias prepara el terreno para el siguiente concepto: la autoridad de control principal.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Autoridad principal · artículo 56 RGPD" data-background-color="#faf7f1">
@@ -594,7 +594,7 @@
             </div>
           </main>
         </div>
-        <aside class="notes">Introducir la lógica de la ventanilla única: en tratamientos transfronterizos se identifica una autoridad principal vinculada al establecimiento principal o único del responsable o encargado. Esa autoridad actúa como interlocutora principal, pero las demás autoridades afectadas siguen participando como autoridades interesadas.</aside>
+        <aside class="notes"><p>Cuando un tratamiento es transfronterizo, necesitamos evitar que una empresa tenga que responder de forma desordenada ante varias autoridades por el mismo asunto. Ahí aparece la lógica de la ventanilla única.</p><p>Se identifica una autoridad principal, normalmente vinculada al establecimiento principal o único del responsable o encargado. Esa autoridad asume el liderazgo del procedimiento.</p><p>Pero conviene evitar una simplificación: <strong>autoridad principal no significa autoridad única.</strong> Las demás autoridades afectadas siguen participando como autoridades interesadas y pueden intervenir en el procedimiento. <strong>La ventanilla única organiza la cooperación; no elimina la pluralidad de supervisores.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Funciones, poderes e informe" data-background-color="#fffdf9">
@@ -613,7 +613,7 @@
             </div>
           </main>
         </div>
-        <aside class="notes">Explicar la diferencia entre tres conceptos: las funciones describen qué debe hacer la autoridad; los poderes son las herramientas jurídicas con las que puede hacerlo; y el informe de actividad garantiza transparencia y rendición de cuentas. Esta distinción ayuda a ordenar los artículos 57, 58 y 59.</aside>
+        <aside class="notes"><p>A partir de aquí conviene separar tres conceptos que a veces se mezclan. Las funciones responden a la pregunta de qué debe hacer una autoridad. Los poderes nos dicen con qué herramientas jurídicas puede hacerlo. Y el informe de actividad sirve para explicar públicamente qué ha hecho.</p><p><strong>Función no es lo mismo que poder: vigilar el cumplimiento es una función; requerir información u ordenar una medida concreta es un poder.</strong> Esta distinción nos ayuda a leer con más claridad los artículos 57, 58 y 59.</p><p>Además, el informe anual introduce una dimensión que también importa en una autoridad independiente: <strong>independencia no significa opacidad; la autoridad debe rendir cuentas sobre su actividad.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Funciones generales · artículo 57" data-background-color="#faf7f1">
@@ -653,7 +653,7 @@
             </figure>
           </main>
         </div>
-        <aside class="notes">Desarrollar las funciones de supervisión general: vigilar el cumplimiento, sensibilizar al público, asesorar a Gobierno y Parlamento, cooperar con otras autoridades, observar el impacto de tecnologías y prácticas comerciales y contribuir al trabajo del CEPD.</aside>
+        <aside class="notes"><p>El artículo 57 muestra hasta qué punto el trabajo de una autoridad va mucho más allá de tramitar expedientes sancionadores. Entre sus funciones está vigilar la aplicación del RGPD, sensibilizar a la ciudadanía, asesorar a los poderes públicos y cooperar con otras autoridades.</p><p>También debe seguir la evolución de las tecnologías y de las prácticas comerciales, porque los riesgos para los derechos no se quedan quietos.</p><p><strong>Una autoridad de protección de datos no actúa solo cuando ya se ha producido una infracción; también informa, asesora, observa y previene.</strong> Y, además, contribuye al trabajo del CEPD. <strong>La supervisión nacional está conectada desde el principio con la construcción de criterios europeos comunes.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Funciones operativas · artículo 57" data-background-color="#fffdf9">
@@ -694,7 +694,7 @@
             </div>
           </main>
         </div>
-        <aside class="notes">Añadir las funciones más operativas: atender reclamaciones, participar en evaluaciones de impacto y consultas previas, mantener listas de tratamientos de alto riesgo y trabajar en códigos de conducta, certificación, acreditación y transferencias internacionales. La autoridad tiene un papel mucho más amplio que el sancionador.</aside>
+        <aside class="notes"><p>En esta segunda parte aparecen funciones mucho más cercanas al trabajo cotidiano de una autoridad: atender reclamaciones, participar en evaluaciones de impacto y consultas previas, mantener determinadas listas de tratamientos de riesgo o intervenir en códigos de conducta y certificación.</p><p>También encontramos actuaciones relacionadas con acreditación y transferencias internacionales.</p><p>La idea que quiero que quede es muy sencilla: <strong>el ciudadano suele conocer a la autoridad por una reclamación o una sanción, pero la actividad institucional es bastante más amplia.</strong> Hay una gran cantidad de trabajo preventivo y técnico que normalmente no genera titulares. <strong>La eficacia de una autoridad se mide también por los problemas que ayuda a evitar, no solo por los que sanciona.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Poderes de investigación · artículo 58" data-background-color="#faf7f1">
@@ -733,7 +733,7 @@
             </figure>
           </main>
         </div>
-        <aside class="notes">Explicar que la autoridad puede requerir información, acceder a datos y locales, realizar investigaciones y auditorías y revisar certificaciones. Son poderes de obtención de evidencia: permiten comprobar por sí misma cómo se está tratando la información.</aside>
+        <aside class="notes"><p>Si una autoridad tiene que comprobar si el RGPD se cumple, necesita poder obtener evidencia por sí misma. Para eso están los poderes de investigación.</p><p>Puede requerir información, acceder a datos y documentación, realizar investigaciones y auditorías y, en los términos previstos, acceder a locales o revisar determinadas certificaciones.</p><p><strong>No basta con que el responsable diga que cumple: la autoridad debe tener capacidad jurídica para verificarlo.</strong> Estos poderes permiten reconstruir qué tratamiento existe realmente y cómo funciona. <strong>Primero se investiga y se obtiene evidencia; después, si procede, se decide qué respuesta correctiva corresponde.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Poderes correctivos · artículo 58" data-background-color="#fffdf9">
@@ -753,7 +753,7 @@
             </div>
           </main>
         </div>
-        <aside class="notes">Recorrer la escala de medidas: advertencias, apercibimientos, órdenes para atender derechos, órdenes para adecuar el tratamiento, limitación o prohibición, retirada de certificaciones, multas y suspensión de transferencias. La idea clave es que el RGPD permite elegir una respuesta proporcionada a cada incumplimiento.</aside>
+        <aside class="notes"><p>Una vez comprobado un incumplimiento, el RGPD ofrece a la autoridad una escala bastante amplia de respuestas. Puede advertir, apercibir, ordenar que se atienda un derecho, exigir que un tratamiento se adapte, limitarlo o incluso prohibirlo.</p><p>También puede retirar determinadas certificaciones, suspender transferencias o imponer multas administrativas.</p><p><strong>La multa es importante, pero es solo una herramienta dentro de un repertorio mucho más amplio.</strong> Lo esencial es que la respuesta pueda adaptarse al problema concreto. <strong>El objetivo del poder correctivo no es sancionar por sancionar, sino conseguir una respuesta efectiva y proporcionada frente al incumplimiento.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="Poderes de autorización y consultivos" data-background-color="#faf7f1">
@@ -799,7 +799,7 @@
             </figure>
           </main>
         </div>
-        <aside class="notes">Explicar la dimensión preventiva y consultiva de la autoridad: consulta previa en tratamientos de alto riesgo, emisión de dictámenes, autorizaciones específicas, códigos de conducta, certificación, acreditación y determinadas transferencias internacionales. Las decisiones de la autoridad están sometidas a tutela judicial efectiva.</aside>
+        <aside class="notes"><p>El artículo 58 también muestra una dimensión menos visible de la autoridad: no todo ocurre después de que algo vaya mal. En determinados supuestos la autoridad autoriza, asesora o emite dictámenes antes o durante el desarrollo de un tratamiento.</p><p>Esto aparece en consultas previas, códigos de conducta, certificación, acreditación o determinadas transferencias internacionales.</p><p><strong>La autoridad tiene también una función preventiva: puede intervenir antes de que el riesgo se convierta en una vulneración.</strong> Y sus decisiones, naturalmente, no están fuera del Derecho. <strong>La independencia de la autoridad convive con la tutela judicial efectiva de quienes se ven afectados por sus decisiones.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="La Agencia Española de Protección de Datos" data-background-color="#fffdf9">
@@ -816,7 +816,7 @@
             </div>
           </main>
         </div>
-        <aside class="notes">Usar la diapositiva como transición desde el modelo abstracto del RGPD a su concreción española. La AEPD es la autoridad estatal que materializa en España muchas de las funciones y poderes que acaban de explicarse.</aside>
+        <aside class="notes"><p>Hasta aquí hemos hablado de la autoridad de control de una manera bastante abstracta, siguiendo el modelo que dibuja el RGPD. Ahora vamos a aterrizarlo en España.</p><p>La AEPD es la autoridad estatal que concreta aquí muchas de las funciones, garantías y poderes que acabamos de estudiar.</p><p><strong>Todo lo que hemos visto sobre independencia, investigación, corrección, prevención y cooperación deja de ser un esquema teórico y pasa a tener una institución concreta.</strong> A partir de ahora veremos cómo se organiza y cuál es su posición jurídica. <strong>La pregunta ya no será qué exige el RGPD a una autoridad, sino cómo se materializa ese modelo en la AEPD.</strong></p></aside>
       </section>
 
       <section class="slide-page" data-title="AEPD · visión general" data-background-color="#faf7f1">
@@ -862,7 +862,7 @@
             </div>
           </main>
         </div>
-        <aside class="notes">Explicar que el Título VII de la LOPDGDD desarrolla la posición institucional de la AEPD: naturaleza de autoridad administrativa independiente, estructura, relación con otros poderes públicos, representación española en el CEPD, presupuesto, personal y potestades de investigación. El esquema se ha actualizado conforme al organigrama oficial vigente en 2026: Presidencia, Adjuntía, Consejo Consultivo, Subdirección General de Inspección de Datos, Subdirección General de Promoción y Autorizaciones, Secretaría General y Servicio Jurídico.</aside>
+        <aside class="notes"><p>Esta diapositiva funciona como mapa del bloque dedicado a la Agencia. El Título VII de la LOPDGDD desarrolla su posición institucional: naturaleza de autoridad administrativa independiente, estructura, relación con otros poderes públicos, representación en el CEPD, presupuesto, personal y potestades de investigación.</p><p>No hace falta aprenderse ahora el organigrama. Lo iremos viendo por partes.</p><p><strong>Lo importante es entender que la independencia necesita una organización concreta, recursos y una distribución interna de funciones.</strong> En 2026 esa estructura se articula alrededor de Presidencia, Adjuntía, Consejo Consultivo, Inspección, Promoción y Autorizaciones, Secretaría General y Servicio Jurídico. <strong>La estructura no es decorativa: es la forma práctica de poder ejercer las funciones que acabamos de estudiar.</strong></p></aside>
       </section>
     `;
 
