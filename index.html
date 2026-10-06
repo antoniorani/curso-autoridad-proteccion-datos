@@ -803,12 +803,9 @@
 
 
   <script>
-    const b64Assets = {
-      cover: ["assets/data/cover-2026-00.txt","assets/data/cover-2026-01.txt","assets/data/cover-2026-02.txt","assets/data/cover-2026-03.txt","assets/data/cover-2026-04.txt","assets/data/cover-2026-05.txt","assets/data/cover-2026-06.txt","assets/data/cover-2026-07.txt","assets/data/cover-2026-08.txt","assets/data/cover-2026-09.txt"],
-      census: ["assets/data/census-0.txt"],
-      sprite: ["assets/data/sprite-0.txt","assets/data/sprite-1.txt","assets/data/sprite-2.txt","assets/data/sprite-3.txt"]
-    };
-    async function loadB64Asset(parts) {
+    const coverParts = ["assets/data/cover-2026-00.txt","assets/data/cover-2026-01.txt","assets/data/cover-2026-02.txt","assets/data/cover-2026-03.txt","assets/data/cover-2026-04.txt","assets/data/cover-2026-05.txt","assets/data/cover-2026-06.txt","assets/data/cover-2026-07.txt","assets/data/cover-2026-08.txt","assets/data/cover-2026-09.txt"];
+
+    async function loadB64Webp(parts) {
       const chunks = await Promise.all(parts.map(async (path) => {
         const response = await fetch(path);
         if (!response.ok) throw new Error("No se pudo cargar " + path);
@@ -816,15 +813,12 @@
       }));
       return "data:image/webp;base64," + chunks.join("");
     }
-    Promise.all([
-      loadB64Asset(b64Assets.cover),
-      loadB64Asset(b64Assets.census),
-      loadB64Asset(b64Assets.sprite)
-    ]).then(([cover, census, sprite]) => {
-      document.querySelectorAll('[data-b64="cover"]').forEach((el) => { el.src = cover; });
-      document.querySelectorAll('[data-b64="census"]').forEach((el) => { el.src = census; });
-      document.documentElement.style.setProperty("--ppt-sprite-image", 'url("' + sprite + '")');
-    }).catch((error) => console.error("Error cargando imágenes de la presentación:", error));
+
+    loadB64Webp(coverParts)
+      .then((cover) => {
+        document.querySelectorAll('[data-b64="cover"]').forEach((el) => { el.src = cover; });
+      })
+      .catch((error) => console.error("Error cargando la portada:", error));
   </script>
 
   <script src="vendor/reveal/reveal.js"></script>

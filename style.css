@@ -689,25 +689,6 @@ figcaption {
   box-shadow: 0 10px 28px rgba(31, 61, 99, 0.08);
 }
 
-.ppt-sprite {
-  width: 100%;
-  height: 100%;
-  background-image: var(--ppt-sprite-image);
-  background-repeat: no-repeat;
-  background-size: 400% 300%;
-  background-color: #fff;
-}
-.tile-s3a { background-position: 0% 0%; }
-.tile-s3b { background-position: 33.333% 0%; }
-.tile-s3c { background-position: 66.666% 0%; }
-.tile-s4a { background-position: 100% 0%; }
-.tile-s4b { background-position: 0% 50%; }
-.tile-s6a { background-position: 33.333% 50%; }
-.tile-s6b { background-position: 66.666% 50%; }
-.tile-s7  { background-position: 100% 50%; }
-.tile-s8  { background-position: 0% 100%; }
-.tile-s9  { background-position: 33.333% 100%; }
-
 .machine-row.single-source {
   grid-template-columns: 1fr;
   width: 100%;
