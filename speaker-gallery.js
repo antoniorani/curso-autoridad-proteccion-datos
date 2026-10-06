@@ -145,6 +145,80 @@
         text-align: center;
       }
 
+      .control-seal {
+        position: relative;
+        display: grid;
+        place-items: center;
+        height: 430px;
+        overflow: hidden;
+        border-radius: 40px;
+        background:
+          radial-gradient(circle at 28% 24%, rgba(241,180,52,.24), transparent 28%),
+          linear-gradient(145deg, #17385f, #244f7d);
+        box-shadow: 0 30px 80px rgba(31,61,99,.22);
+      }
+
+      .control-seal .ring {
+        display: grid;
+        place-items: center;
+        width: 300px;
+        height: 300px;
+        border: 2px solid rgba(255,255,255,.24);
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 24px rgba(255,255,255,.04);
+      }
+
+      .control-seal span {
+        color: #f1b434;
+        font-size: 15px;
+        font-weight: 850;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+      }
+
+      .control-seal strong {
+        display: block;
+        margin-top: 14px;
+        max-width: 270px;
+        color: #fff;
+        font-size: 50px;
+        line-height: .96;
+        letter-spacing: -.06em;
+        text-align: center;
+      }
+
+      .control-seal p {
+        margin: 14px auto 0 !important;
+        max-width: 250px;
+        color: #dbe6f2;
+        font-size: 13px !important;
+        line-height: 1.2 !important;
+        text-align: center;
+      }
+
+      .control-seal-chips {
+        position: absolute;
+        right: 28px;
+        bottom: 22px;
+        left: 28px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .control-seal-chips b {
+        display: grid;
+        min-height: 34px;
+        place-items: center;
+        padding: 8px 9px;
+        border-radius: 13px;
+        background: rgba(255,255,255,.10);
+        color: #fff;
+        font-size: 11.5px;
+        line-height: 1.05;
+        text-align: center;
+      }
+
       .copy-column h2.slide-title-mid { font-size: 54px; line-height: 1.01; }
       .copy-column h2.slide-title-small { font-size: 48px; line-height: 1.02; }
     `;
@@ -170,11 +244,11 @@
       </section>
 
       <section class="slide-page section-break" data-title="RGPD · autoridades de control" data-background-color="#faf7f1">
-        <div class="slide-inner"><header class="topbar"><div class="brand"><img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" /></div><p>Bloque II · supervisión institucional</p></header><main class="control-opening-layout"><div class="copy-column"><p class="kicker">II. Autoridades de control en el RGPD</p><h2>El RGPD no solo impone obligaciones: crea un sistema institucional de supervisión independiente.</h2><p class="body-copy compact-copy">El derecho necesita una arquitectura capaz de controlar, corregir, sancionar, cooperar y orientar.</p><div class="authority-pill-grid"><article><span>Garantía</span><strong>Independencia</strong></article><article><span>Herramientas</span><strong>Funciones y poderes</strong></article><article><span>Escala UE</span><strong>Cooperación</strong></article></div></div><div class="section-marker reveal-block"><span>RGPD</span><strong>Autoridades de control</strong></div></main></div><aside class="notes">Utilizar la diapositiva como apertura del bloque. El RGPD no se limita a imponer obligaciones a responsables y encargados; refuerza un sistema institucional de supervisión independiente con funciones, poderes y mecanismos de cooperación.</aside>
+        <div class="slide-inner"><header class="topbar"><div class="brand"><img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" /></div><p>Bloque II · supervisión institucional</p></header><main class="control-opening-layout"><div class="copy-column"><p class="kicker">II. Autoridades de control en el RGPD</p><h2>El RGPD no solo impone obligaciones: crea un sistema institucional de supervisión independiente.</h2><p class="body-copy compact-copy">El derecho necesita una arquitectura capaz de controlar, corregir, sancionar, cooperar y orientar.</p><div class="authority-pill-grid"><article><span>Garantía</span><strong>Independencia</strong></article><article><span>Herramientas</span><strong>Funciones y poderes</strong></article><article><span>Escala UE</span><strong>Cooperación</strong></article></div></div><div class="control-seal reveal-block" aria-label="Apertura del bloque de autoridades de control"><div class="ring"><div><span>RGPD</span><strong>Autoridades de control</strong><p>independencia · funciones · poderes · cooperación</p></div></div><div class="control-seal-chips"><b>Independencia</b><b>Funciones y poderes</b><b>Cooperación europea</b></div></div></main></div><aside class="notes">Utilizar la diapositiva como apertura del bloque. El RGPD no se limita a imponer obligaciones a responsables y encargados; refuerza un sistema institucional de supervisión independiente con funciones, poderes y mecanismos de cooperación.</aside>
       </section>
 
       <section class="slide-page" data-title="Autoridades de control · visión de conjunto" data-background-color="#fffdf9">
-        <div class="slide-inner"><header class="topbar"><div class="brand"><img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" /></div><p>Mapa del bloque</p></header><main class="control-overview-layout"><figure class="diagram-panel tall"><svg class="safe-diagram" viewBox="0 0 760 520" role="img" aria-label="Visión de conjunto de las autoridades de control"><rect width="760" height="520" rx="34" fill="#fff"/><rect x="30" y="30" width="700" height="460" rx="28" fill="#fbf8f2" stroke="#e8dfd1"/><g font-family="Inter,Arial"><text x="58" y="72" font-size="15" font-weight="850" fill="#c74756" data-fit-width="620">AUTORIDAD DE CONTROL · MAPA DE ELEMENTOS</text><g transform="translate(292 122)"><circle cx="90" cy="90" r="90" fill="#17385f"/><text x="90" y="82" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">APD</text><text x="90" y="110" text-anchor="middle" font-size="13" fill="#dbe6f2">supervisión</text></g><g transform="translate(58 110)"><rect width="190" height="76" rx="19" fill="#eef3f8"/><text x="95" y="46" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Independencia</text></g><g transform="translate(512 110)"><rect width="190" height="76" rx="19" fill="#f7f1e7"/><text x="95" y="46" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Competencia</text></g><g transform="translate(58 222)"><rect width="190" height="76" rx="19" fill="#fff0f1"/><text x="95" y="46" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Funciones</text></g><g transform="translate(512 222)"><rect width="190" height="76" rx="19" fill="#eef3f8"/><text x="95" y="46" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Poderes</text></g><g transform="translate(58 334)"><rect width="190" height="76" rx="19" fill="#f7f1e7"/><text x="95" y="46" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Ventanilla única</text></g><g transform="translate(512 334)"><rect width="190" height="76" rx="19" fill="#fff0f1"/><text x="95" y="46" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Cooperación</text></g><g stroke="#d7dee8" stroke-width="3" fill="none" stroke-linecap="round"><path d="M248 148L292 177"/><path d="M512 148L472 177"/><path d="M248 260L292 212"/><path d="M512 260L472 212"/><path d="M248 372L316 255"/><path d="M512 372L444 255"/></g></g></svg></figure><div class="copy-column"><p class="kicker">Visión de conjunto</p><h2 class="slide-title-mid">La autoridad de control combina independencia, competencia, funciones, poderes y cooperación.</h2><p class="body-copy compact-copy">Esta diapositiva sirve como mapa: cada elemento se desplegará después con su base jurídica y su función en el modelo europeo.</p></div></main></div><aside class="notes">Presentar el esquema general: independencia, miembros y nombramiento, competencia territorial, autoridad principal, funciones, poderes y cooperación. No hace falta explicarlo todo; es un mapa de lo que se desarrollará a continuación.</aside>
+        <div class="slide-inner"><header class="topbar"><div class="brand"><img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" /></div><p>Mapa del bloque</p></header><main class="control-overview-layout"><figure class="diagram-panel tall"><svg class="safe-diagram" viewBox="0 0 760 520" role="img" aria-label="Visión de conjunto de las autoridades de control"><rect width="760" height="520" rx="34" fill="#fff"/><rect x="30" y="30" width="700" height="460" rx="28" fill="#fbf8f2" stroke="#e8dfd1"/><g font-family="Inter,Arial"><text x="58" y="72" font-size="15" font-weight="850" fill="#c74756" data-fit-width="620">AUTORIDAD DE CONTROL · MAPA DE ELEMENTOS</text><g transform="translate(270 100)"><rect width="220" height="82" rx="25" fill="#17385f"/><text x="110" y="34" text-anchor="middle" font-size="14" font-weight="850" fill="#f1b434">AUTORIDAD DE CONTROL</text><text x="110" y="62" text-anchor="middle" font-size="25" font-weight="900" fill="#fff">APD</text></g><g stroke="#c74756" stroke-width="2.7" fill="none" stroke-linecap="round" opacity=".62"><path d="M380 182v241"/><path d="M258 251H502"/><path d="M258 337H502"/><path d="M258 423H502"/></g><g fill="#c74756" opacity=".78"><circle cx="380" cy="251" r="4"/><circle cx="380" cy="337" r="4"/><circle cx="380" cy="423" r="4"/></g><g transform="translate(58 218)"><rect width="200" height="66" rx="18" fill="#eef3f8"/><text x="100" y="40" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Independencia</text></g><g transform="translate(502 218)"><rect width="200" height="66" rx="18" fill="#f7f1e7"/><text x="100" y="40" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Competencia</text></g><g transform="translate(58 304)"><rect width="200" height="66" rx="18" fill="#fff0f1"/><text x="100" y="40" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Funciones</text></g><g transform="translate(502 304)"><rect width="200" height="66" rx="18" fill="#eef3f8"/><text x="100" y="40" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Poderes</text></g><g transform="translate(58 390)"><rect width="200" height="66" rx="18" fill="#f7f1e7"/><text x="100" y="40" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Ventanilla única</text></g><g transform="translate(502 390)"><rect width="200" height="66" rx="18" fill="#fff0f1"/><text x="100" y="40" text-anchor="middle" font-size="14" font-weight="850" fill="#17385f">Cooperación</text></g></g></svg></figure><div class="copy-column"><p class="kicker">Visión de conjunto</p><h2 class="slide-title-mid">La autoridad de control combina independencia, competencia, funciones, poderes y cooperación.</h2><p class="body-copy compact-copy">Esta diapositiva sirve como mapa: cada elemento se desplegará después con su base jurídica y su función en el modelo europeo.</p></div></main></div><aside class="notes">Presentar el esquema general: independencia, miembros y nombramiento, competencia territorial, autoridad principal, funciones, poderes y cooperación. No hace falta explicarlo todo; es un mapa de lo que se desarrollará a continuación.</aside>
       </section>
 
       <section class="slide-page" data-title="Artículo 51 RGPD" data-background-color="#faf7f1">
@@ -636,18 +710,24 @@
                 <rect x="28" y="28" width="704" height="414" rx="28" fill="#fbf8f2" stroke="#e8dfd1"/>
                 <g font-family="Inter,Arial">
                   <text x="56" y="68" font-size="15" font-weight="850" fill="#c74756">ARTÍCULO 57 · FUNCIONES GENERALES</text>
-                  <g transform="translate(290 152)">
-                    <circle cx="90" cy="78" r="72" fill="#17385f"/>
-                    <text x="90" y="68" text-anchor="middle" font-size="16" font-weight="850" fill="#f1b434">AUTORIDAD</text>
-                    <text x="90" y="96" text-anchor="middle" font-size="22" font-weight="900" fill="#fff">de control</text>
+                  <g transform="translate(270 96)">
+                    <rect width="220" height="70" rx="24" fill="#17385f"/>
+                    <text x="110" y="29" text-anchor="middle" font-size="14" font-weight="850" fill="#f1b434">ARTÍCULO 57</text>
+                    <text x="110" y="54" text-anchor="middle" font-size="21" font-weight="900" fill="#fff">Autoridad de control</text>
                   </g>
-                  <g transform="translate(54 112)"><rect width="190" height="82" rx="20" fill="#eef3f8"/><text x="95" y="35" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f" data-fit-width="154">Cumplimiento</text><text x="95" y="58" text-anchor="middle" font-size="12.5" fill="#66778a">vigilar el RGPD</text></g>
-                  <g transform="translate(516 112)"><rect width="190" height="82" rx="20" fill="#f7f1e7"/><text x="95" y="35" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f" data-fit-width="154">Sensibilización</text><text x="95" y="58" text-anchor="middle" font-size="12.5" fill="#66778a">riesgos y derechos</text></g>
-                  <g transform="translate(54 244)"><rect width="190" height="82" rx="20" fill="#fff0f1"/><text x="95" y="35" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f">Asesoramiento</text><text x="95" y="58" text-anchor="middle" font-size="12.5" fill="#66778a">Gobierno y Parlamento</text></g>
-                  <g transform="translate(516 244)"><rect width="190" height="82" rx="20" fill="#eef3f8"/><text x="95" y="35" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f">Cooperación</text><text x="95" y="58" text-anchor="middle" font-size="12.5" fill="#66778a">otras autoridades</text></g>
-                  <g transform="translate(120 350)"><rect width="210" height="66" rx="18" fill="#f7f1e7"/><text x="105" y="29" text-anchor="middle" font-size="14.5" font-weight="850" fill="#17385f" data-fit-width="174">Tecnología y mercado</text><text x="105" y="50" text-anchor="middle" font-size="12" fill="#66778a">seguir su impacto</text></g>
-                  <g transform="translate(430 350)"><rect width="210" height="66" rx="18" fill="#fff0f1"/><text x="105" y="29" text-anchor="middle" font-size="14.5" font-weight="850" fill="#17385f">CEPD</text><text x="105" y="50" text-anchor="middle" font-size="12" fill="#66778a">contribuir a su actividad</text></g>
-                  <g stroke="#c74756" stroke-width="2.5" fill="none" opacity=".62"><path d="M270 184L244 157"/><path d="M490 184L516 157"/><path d="M270 249L244 285"/><path d="M490 249L516 285"/><path d="M330 304L270 350"/><path d="M430 304L490 350"/></g>
+                  <g stroke="#c74756" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".62">
+                    <path d="M380 166v224"/>
+                    <path d="M244 226H516"/>
+                    <path d="M244 308H516"/>
+                    <path d="M244 390H516"/>
+                  </g>
+                  <g fill="#c74756" opacity=".78"><circle cx="380" cy="226" r="4"/><circle cx="380" cy="308" r="4"/><circle cx="380" cy="390" r="4"/></g>
+                  <g transform="translate(54 194)"><rect width="190" height="64" rx="18" fill="#eef3f8"/><text x="95" y="27" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f">Cumplimiento</text><text x="95" y="48" text-anchor="middle" font-size="12.5" fill="#66778a">vigilar el RGPD</text></g>
+                  <g transform="translate(516 194)"><rect width="190" height="64" rx="18" fill="#f7f1e7"/><text x="95" y="27" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f">Sensibilización</text><text x="95" y="48" text-anchor="middle" font-size="12.5" fill="#66778a">riesgos y derechos</text></g>
+                  <g transform="translate(54 276)"><rect width="190" height="64" rx="18" fill="#fff0f1"/><text x="95" y="27" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f">Asesoramiento</text><text x="95" y="48" text-anchor="middle" font-size="12.5" fill="#66778a">Gobierno y Parlamento</text></g>
+                  <g transform="translate(516 276)"><rect width="190" height="64" rx="18" fill="#eef3f8"/><text x="95" y="27" text-anchor="middle" font-size="15" font-weight="850" fill="#17385f">Cooperación</text><text x="95" y="48" text-anchor="middle" font-size="12.5" fill="#66778a">otras autoridades</text></g>
+                  <g transform="translate(54 358)"><rect width="190" height="64" rx="18" fill="#f7f1e7"/><text x="95" y="27" text-anchor="middle" font-size="14.5" font-weight="850" fill="#17385f" data-fit-width="160">Tecnología y mercado</text><text x="95" y="48" text-anchor="middle" font-size="12" fill="#66778a">seguir su impacto</text></g>
+                  <g transform="translate(516 358)"><rect width="190" height="64" rx="18" fill="#fff0f1"/><text x="95" y="27" text-anchor="middle" font-size="14.5" font-weight="850" fill="#17385f">CEPD</text><text x="95" y="48" text-anchor="middle" font-size="12" fill="#66778a">contribuir a su actividad</text></g>
                 </g>
               </svg>
             </figure>
