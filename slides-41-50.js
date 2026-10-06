@@ -52,9 +52,8 @@
 
     root.insertAdjacentHTML("beforeend", [s41,s42,s43,s44,s45,s46,s47,s48,s49,s50].join(""));
     if (window.fitSvgDiagramText) window.fitSvgDiagramText(root);
-    if (window.Reveal) { if (typeof Reveal.sync === "function") Reveal.sync(); if (typeof Reveal.layout === "function") Reveal.layout(); }
   }
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", injectSlides41To50, {once:true});
-  else injectSlides41To50();
+  if (document.querySelector(".reveal .slides")) injectSlides41To50();
+  else document.addEventListener("DOMContentLoaded", injectSlides41To50, { once:true });
 })();
