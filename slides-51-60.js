@@ -117,23 +117,12 @@
     }
   }
 
-  function scheduleInjection() {
-    let lastCount = -1;
-    let stableTicks = 0;
-    let ticks = 0;
-    const timer = window.setInterval(() => {
-      const root = document.querySelector(".reveal .slides");
-      const count = root ? root.querySelectorAll(":scope > section").length : 0;
-      stableTicks = count === lastCount ? stableTicks + 1 : 0;
-      lastCount = count;
-      ticks += 1;
-      if ((root && stableTicks >= 8) || ticks >= 90) {
-        window.clearInterval(timer);
-        injectSlides51To60();
-      }
-    }, 100);
+  // All slide blocks are loaded in numerical script order.
+  // Inject 51–60 at DOMContentLoaded just like 41–50, 61–70 and 71–80,
+  // so later blocks cannot occupy their slide numbers first.
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", injectSlides51To60, { once:true });
+  } else {
+    injectSlides51To60();
   }
-
-  if (document.readyState === "complete") scheduleInjection();
-  else window.addEventListener("load", scheduleInjection);
 })();
