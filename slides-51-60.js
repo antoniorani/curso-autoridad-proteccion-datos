@@ -1,83 +1,9 @@
 (() => {
   "use strict";
 
-  const EXTRA_ID = "slides-51-60-injected";
-
   function injectSlides51To60() {
     const root = document.querySelector(".reveal .slides");
-    if (!root || document.getElementById(EXTRA_ID)) return;
-
-    const style = document.createElement("style");
-    style.id = EXTRA_ID;
-    style.textContent = `
-      .edpb51-layout,
-      .edpb52-layout,
-      .edpb53-layout,
-      .edpb54-layout,
-      .edpb56-layout,
-      .edpb57-layout,
-      .edps58-layout,
-      .web59-layout,
-      .chair60-layout {
-        display: grid;
-        gap: 52px;
-        align-items: center;
-        flex: 1;
-        min-height: 0;
-      }
-      .edpb51-layout,
-      .edpb53-layout,
-      .edpb56-layout,
-      .edps58-layout,
-      .chair60-layout { grid-template-columns: minmax(0, 1fr) 640px; }
-      .edpb52-layout,
-      .edpb54-layout,
-      .edpb57-layout,
-      .web59-layout { grid-template-columns: 640px minmax(0, 1fr); }
-
-      .diagram-panel-51-60 { margin:0; height:430px; overflow:hidden; border:0; border-radius:30px; background:transparent; box-shadow:none; }
-      .diagram-panel-51-60.tall { height:470px; }
-      .diagram-panel-51-60 svg { display:block; width:100%; height:100%; overflow:hidden; }
-
-      .edpb55-layout { display:flex; flex-direction:column; gap:24px; flex:1; min-height:0; }
-      .edpb55-layout .copy-column { max-width:1260px; }
-      .edpb55-layout h2 { max-width:1180px; font-size:52px; line-height:1.01; }
-      .article-strip-55 { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:14px; }
-      .article-strip-55 article { min-height:154px; padding:20px 18px; border-radius:24px; border:1px solid rgba(31,61,99,.10); background:rgba(255,255,255,.75); box-shadow:0 16px 44px rgba(31,61,99,.07); overflow:hidden; }
-      .article-strip-55 span { color:var(--red); font-size:13px; font-weight:900; letter-spacing:.08em; }
-      .article-strip-55 strong { display:block; margin-top:12px; color:var(--blue-deep); font-size:20px; line-height:1.05; letter-spacing:-.03em; }
-      .article-strip-55 p { margin:10px 0 0!important; color:var(--muted); font-size:14px!important; line-height:1.18!important; }
-
-      .edpb51-layout h2,
-      .edpb52-layout h2,
-      .edpb53-layout h2,
-      .edpb54-layout h2,
-      .edpb56-layout h2,
-      .edpb57-layout h2,
-      .edps58-layout h2,
-      .web59-layout h2,
-      .chair60-layout h2 { font-size:49px; line-height:1.01; }
-      .edpb51-layout .body-copy,
-      .edpb52-layout .body-copy,
-      .edpb53-layout .body-copy,
-      .edpb54-layout .body-copy,
-      .edpb56-layout .body-copy,
-      .edpb57-layout .body-copy,
-      .edps58-layout .body-copy,
-      .web59-layout .body-copy,
-      .chair60-layout .body-copy { font-size:20px!important; line-height:1.24!important; }
-
-      .edpb-chip-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:24px; }
-      .edpb-chip-grid.two { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .edpb-chip-grid article { min-height:78px; padding:13px 14px; overflow:hidden; border-top:2px solid rgba(199,71,86,.34); border-radius:0 0 20px 20px; background:rgba(255,255,255,.56); }
-      .edpb-chip-grid span { color:var(--gold); font-size:10px; font-weight:850; letter-spacing:.10em; text-transform:uppercase; }
-      .edpb-chip-grid strong { display:block; margin-top:7px; color:var(--blue-deep); font-size:17px; line-height:1.08; overflow-wrap:anywhere; }
-
-      .edpb-title-card { height:430px; display:grid; place-items:center; border-radius:36px; background:linear-gradient(135deg,#17385f,#254f7d); color:#fff; box-shadow:0 26px 72px rgba(31,61,99,.18); }
-      .edpb-title-card span { color:#f1b434; font-size:15px; font-weight:850; letter-spacing:.14em; text-transform:uppercase; }
-      .edpb-title-card strong { display:block; margin-top:18px; max-width:430px; font-size:56px; line-height:.95; letter-spacing:-.055em; text-align:center; }
-    `;
-    document.head.appendChild(style);
+    if (!root) return;
 
     const html = `
       <section class="slide-page" data-title="Instituciones y organismos europeos" data-background-color="#fffdf9">
