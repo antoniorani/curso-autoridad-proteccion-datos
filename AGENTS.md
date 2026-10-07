@@ -147,3 +147,32 @@ Para cada diapositiva revisada comprobar:
 **Conservar el sistema visual; rediseñar la comunicación.**
 
 La plantilla debe dar consistencia al curso, pero cada diapositiva debe tener una composición y un uso de imágenes adecuados a la historia que se está contando.
+
+## Arquitectura técnica vigente · 82 diapositivas
+
+La arquitectura actual se ha simplificado deliberadamente. **No introducir una segunda fuente de verdad.**
+
+- `index.html` contiene las 82 diapositivas y sus notas. El orden del HTML es el orden de la presentación.
+- `style.css` contiene todos los estilos de las diapositivas.
+- `speaker-gallery.js` solo implementa la galería de Speaker View.
+- `vendor/reveal/notes.js` es el plugin de notas de Reveal y no debe cargar contenido propio del curso.
+- No generar diapositivas en runtime.
+- No cargar bloques mediante `document.write`, `DOMContentLoaded`, `load`, temporizadores o cadenas de loaders.
+- No inyectar CSS de diapositivas desde JavaScript.
+- No guardar versiones alternativas del contenido en plugins, ramas auxiliares o archivos de bloques y asumir que son la fuente usada por producción.
+
+Las dos diapositivas adicionales de multas elevan el deck de las 80 diapositivas del guion fuente a **82 diapositivas en producción**.
+
+Pruebas de humo mínimas después de tocar estructura, contenido o notas:
+
+1. El documento contiene exactamente **82** `section.slide-page`.
+2. Los títulos `data-title` son únicos.
+3. La diapositiva 45 es «Principales multas RGPD internacionales».
+4. La diapositiva 46 es «Principales multas de la AEPD».
+5. «Casos» es la diapositiva 75.
+6. «Gracias · preguntas» es la diapositiva 82.
+7. Cada diapositiva conserva un único `aside.notes`.
+8. Speaker View muestra las mismas notas que existen en `index.html`.
+
+El principio técnico es deliberadamente conservador: **si una necesidad puede resolverse con HTML y CSS existentes, no añadir JavaScript ni una nueva abstracción.**
+
