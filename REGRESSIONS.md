@@ -1,8 +1,46 @@
 # Registro de regresiones
 
+## 2026-10-07 — Varias fuentes de diapositivas desincronizaron Speaker View
+
+**Problema detectado**
+
+El contenido estaba repartido entre `index.html`, `speaker-gallery.js` y varios `slides-*.js`. Además, `vendor/reveal/notes.js` cargaba indirectamente otros scripts mediante wrappers y `document.write`. Las diapositivas 21–40 tenían versiones distintas en ramas auxiliares y en `main`.
+
+**Síntoma observado**
+
+Las notas 21–40 se reescribieron correctamente en ramas de trabajo, pero Speaker View seguía mostrando en producción las notas antiguas de `speaker-gallery.js`, redactadas como instrucciones internas («Explicar…», «Mostrar…») y sin las ideas centrales en negrita.
+
+**Causa**
+
+Había varias fuentes de verdad y responsabilidades mezcladas:
+
+- contenido de diapositivas dentro del plugin de Speaker View;
+- bloques de diapositivas generados con JavaScript;
+- estilos creados desde JavaScript;
+- carga de contenido acoplada al plugin de notas;
+- orden visible dependiente de orden de ejecución.
+
+**Corrección aplicada**
+
+- Las 82 diapositivas y sus notas se materializaron como HTML estático en `index.html`.
+- Todos los estilos de diapositivas se centralizaron en `style.css`.
+- `speaker-gallery.js` quedó limitado a la galería de Speaker View.
+- `vendor/reveal/notes.js` volvió a ser únicamente el plugin de notas de Reveal.
+- Se eliminaron los scripts `slides-*.js` y los loaders indirectos.
+- El runtime propio se redujo a una sola extensión: `speaker-gallery.js`.
+
+**Regla para el futuro**
+
+No reintroducir generación de diapositivas en runtime ni una segunda fuente de contenido. El deck debe poder auditarse leyendo `index.html` y `style.css`.
+
+Pruebas de humo: 82 diapositivas; multas en 45–46; «Casos» en 75; «Gracias · preguntas» en 82; títulos únicos; un único bloque de notas por slide.
+
+
 Este archivo recoge fallos reales introducidos durante cambios técnicos para evitar repetirlos en futuras presentaciones.
 
 ## 2026-10-06 — Los bloques 51–60 se cargaban después de 61–80
+
+> Estado actual: esta arquitectura de bloques ya fue retirada el 7 de octubre de 2026. Se conserva esta entrada únicamente como historial de la regresión.
 
 **Cambio que introdujo la regresión**
 
