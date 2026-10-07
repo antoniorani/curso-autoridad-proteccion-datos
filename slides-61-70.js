@@ -1,6 +1,5 @@
 (() => {
   "use strict";
-  const EXTRA_ID = "slides-61-70-injected";
 
   const logo = '<img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" />';
   const topbar = (eyebrow) => `<header class="topbar"><div class="brand">${logo}</div><p>${eyebrow}</p></header>`;
@@ -18,24 +17,7 @@
 
   function injectSlides61To70(){
     const root = document.querySelector(".reveal .slides");
-    if(!root || document.getElementById(EXTRA_ID)) return;
-    const style = document.createElement("style");
-    style.id = EXTRA_ID;
-    style.textContent = `
-      .edpb61-layout,.edpb62-layout,.edpb63-layout,.edpb64-layout,.edpb65-layout,.edpb66-layout,.edpb67-layout,.edpb68-layout,.imi69-layout,.imi70-layout{display:grid;gap:52px;align-items:center;flex:1;min-height:0;}
-      .edpb61-layout,.edpb63-layout,.edpb65-layout,.edpb67-layout,.imi69-layout{grid-template-columns:minmax(0,1fr) 640px;}
-      .edpb62-layout,.edpb64-layout,.edpb66-layout,.edpb68-layout,.imi70-layout{grid-template-columns:640px minmax(0,1fr);}
-      .diagram-panel-61-70{margin:0;height:430px;overflow:hidden;border:0;border-radius:30px;background:transparent;box-shadow:none;}
-      .diagram-panel-61-70.tall{height:470px;}
-      .diagram-panel-61-70 svg{display:block;width:100%;height:100%;overflow:hidden;}
-      .edpb61-layout h2,.edpb62-layout h2,.edpb63-layout h2,.edpb64-layout h2,.edpb65-layout h2,.edpb66-layout h2,.edpb67-layout h2,.edpb68-layout h2,.imi69-layout h2,.imi70-layout h2{font-size:49px;line-height:1.01;}
-      .edpb61-layout .body-copy,.edpb62-layout .body-copy,.edpb63-layout .body-copy,.edpb64-layout .body-copy,.edpb65-layout .body-copy,.edpb66-layout .body-copy,.edpb67-layout .body-copy,.edpb68-layout .body-copy,.imi69-layout .body-copy,.imi70-layout .body-copy{font-size:20px!important;line-height:1.24!important;}
-      .info-chip-grid-61{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px;}.info-chip-grid-61.two{grid-template-columns:repeat(2,minmax(0,1fr));}
-      .info-chip-grid-61 article{min-height:78px;padding:13px 14px;overflow:hidden;border-top:2px solid rgba(199,71,86,.34);border-radius:0 0 20px 20px;background:rgba(255,255,255,.56);}
-      .info-chip-grid-61 span{color:var(--gold);font-size:10px;font-weight:850;letter-spacing:.10em;text-transform:uppercase;}.info-chip-grid-61 strong{display:block;margin-top:7px;color:var(--blue-deep);font-size:17px;line-height:1.08;overflow-wrap:anywhere;}
-      .bands-61{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px;}.bands-61 article{min-height:150px;padding:18px;border-radius:24px;border:1px solid rgba(31,61,99,.10);background:rgba(255,255,255,.72);box-shadow:0 16px 44px rgba(31,61,99,.07);overflow:hidden;}.bands-61 span{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue-deep);color:#fff;font-size:13px;font-weight:900;}.bands-61 article:nth-child(2) span{background:var(--gold);}.bands-61 article:nth-child(3) span,.bands-61 article:nth-child(4) span{background:var(--red);}.bands-61 strong{display:block;margin-top:12px;color:var(--blue-deep);font-size:20px;line-height:1.04;}.bands-61 p{margin:9px 0 0!important;color:var(--muted);font-size:13.5px!important;line-height:1.18!important;}
-    `;
-    document.head.appendChild(style);
+    if (!root) return;
 
     const s61 = section({title:"Dictámenes del CEPD",bg:"#fffdf9",eyebrow:"CEPD · dictámenes",layout:"edpb61-layout",copy:copy("Opiniones y posición común","Los dictámenes del CEPD ayudan a anticipar una aplicación homogénea antes de que cada autoridad decida.","Funcionan como punto de convergencia: ordenan cuestiones generales, proyectos nacionales y procedimientos previstos por el RGPD.",[["Objeto","criterio previo y armonizador"],["Uso","autoridades, responsables y encargados"],["Resultado","menos fragmentación interpretativa"]]),visual:panel(svgWrap("Dictámenes del Comité Europeo de Protección de Datos",titleLine("DICTÁMENES DEL CEPD · CONVERGENCIA ANTES DE DECIDIR")+`${box(60,118,190,72,"#eef3f8","Cuestión general","interpretación")}${box(510,118,190,72,"#f7f1e7","Proyecto nacional","consulta prevista")}<g stroke="#c74756" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".66"><path d="M250 154H286Q304 154 318 168L336 186"/><path d="M510 154H474Q456 154 442 168L424 186"/></g><g transform="translate(250 186)"><rect width="260" height="82" rx="26" fill="#17385f"/><text x="130" y="32" text-anchor="middle" font-size="14" font-weight="850" fill="#f1b434">DICTAMEN CEPD</text><text x="130" y="59" text-anchor="middle" font-size="14" fill="#fff">criterio común antes de la decisión</text></g><g stroke="#c74756" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".62"><path d="M380 268v36"/><path d="M150 304H610"/><path d="M150 304v22"/><path d="M380 304v22"/><path d="M610 304v22"/></g>${box(60,326,180,78,"#eef3f8","Procedimiento","casos previstos")}${box(290,326,180,78,"#fff0f1","Armonización","criterio común")}${box(520,326,180,78,"#f7f1e7","Publicación","transparencia")}`)),notes:"<p>Entramos ahora en los instrumentos concretos del Comité. Uno de ellos son los dictámenes. El CEPD los emite en procedimientos previstos por el RGPD y también en cuestiones de aplicación general.</p><p>Su utilidad está en que permiten poner en común una posición europea antes de que determinadas decisiones nacionales queden cerradas. Es decir, no esperamos siempre a que aparezca un conflicto después.</p><p><strong>Los dictámenes son una herramienta para anticipar y armonizar criterios entre autoridades.</strong> Nos muestran una función importante del CEPD: hacer que decisiones adoptadas en países distintos partan de una lectura compatible del Reglamento. <strong>La coherencia también se construye antes de decidir, no solo resolviendo desacuerdos al final.</strong></p>"});
 
