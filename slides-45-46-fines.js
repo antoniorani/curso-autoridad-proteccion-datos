@@ -1,6 +1,5 @@
 (() => {
   "use strict";
-  const EXTRA_ID = "slides-45-46-fines-injected";
   const logo = '<img class="aepd-logo" src="assets/aepd-logo.svg" alt="AEPD – Agencia Española de Protección de Datos" />';
   const top = (txt) => `<header class="topbar"><div class="brand">${logo}</div><p>${txt}</p></header>`;
   const fmt = (v) => v >= 1000 ? (v/1000).toFixed(1).replace('.', ',') + " B€" : v.toLocaleString('es-ES', { maximumFractionDigits: 2 }) + " M€";
@@ -37,23 +36,9 @@
 
   function injectFinesSlides(){
     const root = document.querySelector(".reveal .slides");
-    if(!root || document.getElementById(EXTRA_ID)) return;
+    if (!root) return;
     const after = [...root.querySelectorAll(':scope > section')].find(s => s.dataset.title === "Poderes de la AEPD");
     if(!after) return;
-    const style = document.createElement("style");
-    style.id = EXTRA_ID;
-    style.textContent = `
-      .fines-slide-layout{display:grid;grid-template-columns:760px minmax(0,1fr);gap:42px;align-items:center;flex:1;min-height:0;}
-      .fines-chart-panel{margin:0;height:470px;overflow:hidden;border:0;border-radius:30px;background:transparent;box-shadow:none;}
-      .fines-chart-panel svg{display:block;width:100%;height:100%;overflow:hidden;}
-      .fines-slide-layout h2{font-size:45px;line-height:1.02;}
-      .fines-slide-layout .body-copy{font-size:19px!important;line-height:1.24!important;}
-      .fines-chip-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px;}
-      .fines-chip-grid article{min-height:78px;padding:13px 14px;overflow:hidden;border-top:2px solid rgba(199,71,86,.34);border-radius:0 0 20px 20px;background:rgba(255,255,255,.58);}
-      .fines-chip-grid span{color:var(--gold);font-size:10px;font-weight:850;letter-spacing:.10em;text-transform:uppercase;}
-      .fines-chip-grid strong{display:block;margin-top:7px;color:var(--blue-deep);font-size:16px;line-height:1.08;overflow-wrap:anywhere;}
-    `;
-    document.head.appendChild(style);
 
     const intlChart = panel(`<text x="56" y="70" font-size="15" font-weight="850" fill="#c74756" data-fit-width="640">MAYORES MULTAS RGPD · INTERNACIONAL</text><text x="56" y="94" font-size="11.5" fill="#66778a">Importes en millones de euros. Amazon 746 M€ no se incluye porque fue anulada en 2026.</text>${barRows(intl,1200,{xBadge:50,xLabel:238,xBar:258,maxw:370,step:42})}<g transform="translate(56 462)"><rect width="24" height="16" rx="8" fill="#fff0f1" stroke="#efc6cc"/><text x="12" y="12" text-anchor="middle" font-size="10" font-weight="900" fill="#c74756">↔</text><text x="34" y="13" font-size="11.5" font-weight="850" fill="#17385f">caso transnacional / cooperación entre autoridades</text></g>`, "Mayores multas RGPD internacionales");
     const spainChart = panel(`<text x="56" y="70" font-size="15" font-weight="850" fill="#c74756" data-fit-width="640">MAYORES MULTAS AEPD · ESPAÑA</text><text x="56" y="94" font-size="11.5" fill="#66778a">Importes en millones de euros. Se muestra la sanción anunciada o propuesta cuando hay reducción por pronto pago.</text>${barRows(spain,18,{xBadge:50,xLabel:238,xBar:258,maxw:370,step:52})}<g transform="translate(56 462)"><rect width="24" height="16" rx="8" fill="#fff0f1" stroke="#efc6cc"/><text x="12" y="12" text-anchor="middle" font-size="10" font-weight="900" fill="#c74756">↔</text><text x="34" y="13" font-size="11.5" font-weight="850" fill="#17385f">dimensión transnacional: transferencias, cooperación o entidad no española</text></g>`, "Mayores multas de la AEPD en España");
