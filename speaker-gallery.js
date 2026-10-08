@@ -78,6 +78,8 @@
     function updateActiveThumbnail() {
       if (!overlay || !speakerWindow || speakerWindow.closed) return;
       const activeIndex = currentIndex();
+      const currentLabel = speakerWindow.document.querySelector("#current-slide .label");
+      if (currentLabel) currentLabel.textContent = `${labels.slide} ${activeIndex + 1} / ${slides.length}`;
       thumbnails.forEach((button, index) => {
         const active = index === activeIndex;
         button.classList.toggle("is-current", active);
