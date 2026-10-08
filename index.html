@@ -26,7 +26,7 @@
               <p class="subtitle">Un recorrido desde los primeros registros de población hasta la supervisión independiente del tratamiento de datos.</p>
             </div>
             <div class="cover-visual reveal-block single-cover">
-              <figure class="cover-photo hero-full"><img src="" data-b64="cover" alt="Ilustración sobre la evolución histórica de la protección de datos" /></figure>
+              <figure class="cover-photo hero-full"><img src="assets/cover-2026.webp" alt="Ilustración sobre la evolución histórica de la protección de datos" /></figure>
             </div>
           </main>
           <footer class="footnote presenter-footer reveal-block"><p><span>Ponente</span><strong>Antonio Ramos Nieto</strong></p></footer>
@@ -1357,27 +1357,7 @@
     </div>
   </div>
 
-
-  <script>
-    const coverParts = ["assets/data/cover-2026-00.txt","assets/data/cover-2026-01.txt","assets/data/cover-2026-02.txt","assets/data/cover-2026-03.txt","assets/data/cover-2026-04.txt","assets/data/cover-2026-05.txt","assets/data/cover-2026-06.txt","assets/data/cover-2026-07.txt","assets/data/cover-2026-08.txt","assets/data/cover-2026-09.txt"];
-
-    async function loadB64Webp(parts) {
-      const chunks = await Promise.all(parts.map(async (path) => {
-        const response = await fetch(path);
-        if (!response.ok) throw new Error("No se pudo cargar " + path);
-        return (await response.text()).trim();
-      }));
-      return "data:image/webp;base64," + chunks.join("");
-    }
-
-    loadB64Webp(coverParts)
-      .then((cover) => {
-        document.querySelectorAll('[data-b64="cover"]').forEach((el) => { el.src = cover; });
-      })
-      .catch((error) => console.error("Error cargando la portada:", error));
-  </script>
-
-  <script src="vendor/reveal/reveal.js"></script>
+<script src="vendor/reveal/reveal.js"></script>
 
   <!-- Reveal plugins: content loading is intentionally kept out of plugins. -->
   <script src="speaker-gallery.js"></script>
