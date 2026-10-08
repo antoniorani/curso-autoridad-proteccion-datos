@@ -2,72 +2,57 @@
 
 Presentación web del curso sobre autoridades de control, AEPD y Comité Europeo de Protección de Datos.
 
-La presentación deriva de `antoniorani/template-diapositivas-aepd` y conserva Reveal.js, lienzo fijo de 1600 × 900, Speaker View, dependencias críticas locales e identidad visual AEPD.
+Deriva de `antoniorani/template-diapositivas-aepd`. Este repositorio documenta únicamente el **contenido y las excepciones propias del curso**; el motor genérico pertenece a `template-diapositivas` y el sistema visual a `template-diapositivas-aepd`.
 
-## Arquitectura
+## Arquitectura del curso
 
-La presentación no tiene build ni genera diapositivas en tiempo de ejecución.
+No hay build ni generación de slides en runtime.
 
-- `index.html`: **fuente única del contenido**. Contiene las 82 `section.slide-page` y sus notas de ponente.
-- `style.css`: **fuente única de estilos de las diapositivas**.
-- `speaker-gallery.js`: personalizaciones de Speaker View: galería y contador de diapositiva; no contiene ni carga diapositivas.
-- `vendor/reveal/reveal.js`, `vendor/reveal/reveal.css` y `vendor/reveal/notes.js`: dependencias locales de Reveal.js.
-- `assets/`: imágenes, logo y datos de la portada.
+- `index.html`: fuente única de las **82 diapositivas** y sus notas.
+- `style.css`: estilos específicos del curso sobre la base visual AEPD.
+- `assets/`: imágenes y recursos propios del curso.
+- `speaker-gallery.js` y `vendor/reveal/`: copia sincronizada del motor común; no contienen contenido del curso.
+- `AGENTS.md`: criterios editoriales y técnicos específicos del curso.
+- `REGRESSIONS.md`: regresiones propias de esta presentación.
 
-No deben reintroducirse loaders de bloques, inyección de diapositivas desde JavaScript, CSS generado en runtime ni carga de contenido desde el plugin de notas.
+No reintroducir loaders de bloques, diapositivas generadas por JavaScript, CSS de slides generado en runtime ni fuentes alternativas de contenido.
 
 ## Contenido
 
-El guion de revisión original cubre 80 diapositivas. El deck actual contiene **82** porque incorpora dos diapositivas docentes adicionales de multas.
+El guion de revisión original cubre 80 diapositivas. El deck contiene **82** porque incorpora dos diapositivas docentes adicionales de multas.
 
 - 1–20 · antecedentes históricos y normativos.
-- 21–40 · marco legal y autoridades de control en el RGPD.
-- 41–51 · AEPD y dos diapositivas adicionales de sanciones.
+- 21–40 · marco legal y autoridades de control.
+- 41–51 · AEPD y sanciones.
 - 52–74 · CEPD, cooperación, herramientas e IMI.
 - 75–82 · casos, IA, neuroderechos, temas recientes y cierre.
 
-Pruebas de humo útiles:
+Pruebas de humo:
 
-- diapositiva 45: `Principales multas RGPD internacionales`;
-- diapositiva 46: `Principales multas de la AEPD`;
-- diapositiva 75: `Casos`;
-- diapositiva 82: `Gracias · preguntas`.
+- 45 · `Principales multas RGPD internacionales`;
+- 46 · `Principales multas de la AEPD`;
+- 75 · `Casos`;
+- 82 · `Gracias · preguntas`.
 
 ## Notas del ponente
 
-Cada diapositiva incluye sus notas en:
+Cada slide contiene un único `<aside class="notes">...</aside>`. Las notas están redactadas como guion oral y las ideas centrales se marcan con `<strong>`.
 
-```html
-<aside class="notes">...</aside>
-```
+La numeración se muestra solo en Speaker View.
 
-Las notas están redactadas como guion oral y las ideas centrales se marcan con `<strong>` para localizarlas rápidamente en Speaker View.
+## Publicación
 
-## Ver la presentación
-
-GitHub Pages:
+URL pública:
 
 https://antoniorani.github.io/curso-autoridad-proteccion-datos/
 
-## Navegación
+La política del ecosistema es GitHub Pages desde **`main` / `(root)`**, sin workflow de despliegue una vez configurado el repositorio con **Deploy from a branch**.
 
-- Flechas / Page Up / Page Down / espacio: navegar.
-- `S`: abrir Speaker View.
-- En Speaker View, `G`: abrir la galería de diapositivas.
-- Reveal.js mantiene hash, controles y progreso. La numeración se muestra solo en Speaker View.
+## Mantenimiento
 
-## Contrato visual y técnico
+Antes de modificar contenido, diseño o arquitectura:
 
-- Lienzo fijo de 1600 × 900; Reveal.js escala la composición completa.
-- Estructura de cada diapositiva: `section.slide-page > .slide-inner`.
-- No usar breakpoints para reorganizar las diapositivas como páginas responsive.
-- Si un contenido no cabe, simplificar el contenido o cambiar el layout.
-- Mantener Reveal.js y Notes vendorizados localmente.
-- El orden de las diapositivas es el orden del HTML; no depende de eventos ni de temporización JavaScript.
-
-## Guía para futuras iteraciones
-
-Antes de modificar contenido, diseño o arquitectura, consultar:
-
-- `AGENTS.md`: criterio editorial, visual y técnico.
-- `REGRESSIONS.md`: fallos reales que no deben reintroducirse.
+- leer `AGENTS.md` para criterios propios del curso;
+- leer `REGRESSIONS.md` para fallos históricos de esta presentación;
+- acudir al template AEPD para decisiones visuales compartidas;
+- acudir al template genérico para decisiones del motor.
