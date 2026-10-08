@@ -267,7 +267,6 @@ figcaption {
 /* Reveal controls */
 .reveal .progress { height: 3px; color: var(--red); background: rgba(31, 61, 99, 0.08); }
 .reveal .controls { color: var(--red); }
-.reveal .slide-number { right: 34px; bottom: 25px; background: transparent; color: rgba(31, 61, 99, 0.42); font-size: 12px; font-weight: 700; letter-spacing: 0.06em; }
 
 /* Motion */
 .reveal .slides section.present .topbar { animation: softDown 0.54s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
