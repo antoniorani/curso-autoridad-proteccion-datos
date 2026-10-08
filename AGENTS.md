@@ -154,8 +154,9 @@ La arquitectura actual se ha simplificado deliberadamente. **No introducir una s
 
 - `index.html` contiene las 82 diapositivas y sus notas. El orden del HTML es el orden de la presentación.
 - `style.css` contiene todos los estilos de las diapositivas.
-- `speaker-gallery.js` solo implementa la galería de Speaker View.
+- `speaker-gallery.js` solo implementa personalizaciones de Speaker View: galería y contador de diapositiva.
 - `vendor/reveal/notes.js` es el plugin de notas de Reveal y no debe cargar contenido propio del curso.
+- La vista pública no muestra número de diapositiva; la numeración pertenece exclusivamente a Speaker View.
 - No generar diapositivas en runtime.
 - No cargar bloques mediante `document.write`, `DOMContentLoaded`, `load`, temporizadores o cadenas de loaders.
 - No inyectar CSS de diapositivas desde JavaScript.
