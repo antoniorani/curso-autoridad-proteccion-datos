@@ -10,7 +10,7 @@ La presentación no tiene build ni genera diapositivas en tiempo de ejecución.
 
 - `index.html`: **fuente única del contenido**. Contiene las 82 `section.slide-page` y sus notas de ponente.
 - `style.css`: **fuente única de estilos de las diapositivas**.
-- `speaker-gallery.js`: extensión de la Speaker View para la galería; no contiene ni carga diapositivas.
+- `speaker-gallery.js`: personalizaciones de Speaker View: galería y contador de diapositiva; no contiene ni carga diapositivas.
 - `vendor/reveal/reveal.js`, `vendor/reveal/reveal.css` y `vendor/reveal/notes.js`: dependencias locales de Reveal.js.
 - `assets/`: imágenes, logo y datos de la portada.
 
@@ -54,7 +54,7 @@ https://antoniorani.github.io/curso-autoridad-proteccion-datos/
 - Flechas / Page Up / Page Down / espacio: navegar.
 - `S`: abrir Speaker View.
 - En Speaker View, `G`: abrir la galería de diapositivas.
-- Reveal.js mantiene hash, controles, progreso y numeración.
+- Reveal.js mantiene hash, controles y progreso. La numeración se muestra solo en Speaker View.
 
 ## Contrato visual y técnico
 
