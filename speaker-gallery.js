@@ -46,7 +46,7 @@
   }
 
   function createPlugin() {
-    let deck, speakerWindow, overlay, grid, openButton;
+    let deck, speakerWindow, overlay, grid, openButton, slideCounter;
     let thumbnails = [];
     let slides = [];
     let selectedIndex = 0;
@@ -78,8 +78,7 @@
     function updateActiveThumbnail() {
       if (!overlay || !speakerWindow || speakerWindow.closed) return;
       const activeIndex = currentIndex();
-      const currentLabel = speakerWindow.document.querySelector("#current-slide .label");
-      if (currentLabel) currentLabel.textContent = `${labels.slide} ${activeIndex + 1} / ${slides.length}`;
+      if (slideCounter) slideCounter.textContent = `${labels.slide} ${activeIndex + 1} / ${slides.length}`;
       thumbnails.forEach((button, index) => {
         const active = index === activeIndex;
         button.classList.toggle("is-current", active);
@@ -167,6 +166,14 @@
       if (!doc?.body || doc.getElementById(GALLERY_ID)) return;
       speakerWindow = speaker;
       slides = slideDescriptors();
+
+      const currentSlide = doc.getElementById("current-slide");
+      if (currentSlide) {
+        slideCounter = doc.createElement("span");
+        slideCounter.className = "overlay-element label";
+        currentSlide.appendChild(slideCounter);
+      }
+
       const style = doc.createElement("style");
       style.dataset.speakerGallery = "true";
       style.textContent = galleryStyles();
