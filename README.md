@@ -8,7 +8,7 @@ Deriva de `antoniorani/template-diapositivas-aepd`. Este repositorio documenta �
 
 No hay build ni generación de slides en runtime.
 
-- `index.html`: fuente única de las **82 diapositivas** y sus notas.
+- `index.html`: fuente única de las **79 diapositivas** y sus notas.
 - `style.css`: estilos específicos del curso sobre la base visual AEPD.
 - `assets/`: imágenes y recursos propios del curso.
 - `speaker-gallery.js` y `vendor/reveal/`: copia sincronizada del motor común; no contienen contenido del curso.
@@ -19,20 +19,20 @@ No reintroducir loaders de bloques, diapositivas generadas por JavaScript, CSS d
 
 ## Contenido
 
-El guion de revisión original cubre 80 diapositivas. El deck contiene **82** porque incorpora dos diapositivas docentes adicionales de multas.
+El guion de revisión original cubre 80 diapositivas. Se incorporaron dos diapositivas docentes adicionales de multas y posteriormente se eliminaron las originales 22, 25 y 42: el deck actual contiene **79**.
 
 - 1–20 · antecedentes históricos y normativos.
-- 21–40 · marco legal y autoridades de control.
-- 41–51 · AEPD y sanciones.
-- 52–74 · CEPD, cooperación, herramientas e IMI.
-- 75–82 · casos, IA, neuroderechos, temas recientes y cierre.
+- 21–38 · marco legal y autoridades de control.
+- 39–48 · AEPD y sanciones.
+- 49–71 · CEPD, cooperación, herramientas e IMI.
+- 72–79 · casos, IA, neuroderechos, temas recientes y cierre.
 
 Pruebas de humo:
 
-- 45 · `Principales multas RGPD internacionales`;
-- 46 · `Principales multas de la AEPD`;
-- 75 · `Casos`;
-- 82 · `Gracias · preguntas`.
+- 42 · `Principales multas RGPD internacionales`;
+- 43 · `Principales multas de la AEPD`;
+- 72 · `Casos`;
+- 79 · `Gracias · preguntas`.
 
 ## Notas del ponente
 

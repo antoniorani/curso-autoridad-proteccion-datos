@@ -46,12 +46,16 @@ La arquitectura de bloques fue retirada. El orden de las 82 diapositivas es ahor
 
 El contenido numerado del curso no debe depender de eventos, temporizadores ni loaders para establecer su orden.
 
+## 2026-11-04 — Eliminación editorial de tres diapositivas y revisión de notas
+
+Por petición del responsable del curso, se eliminaron las diapositivas originales 22, 25 y 42. La numeración pasa de 82 a 79. Se revisaron las notas históricas de los originales 2, 3, 5, 7, 10, 18 y 20, y las multas internacionales/españolas originales 45 y 46, con distinción de importes iniciales y firmeza procesal. Las notas siguen viviendo únicamente en `index.html`; no cambió el motor de presentación.
+
 ## Pruebas de humo
 
-- 82 `section.slide-page`;
-- 82 títulos `data-title` únicos;
+- 79 `section.slide-page`;
+- 79 títulos `data-title` únicos;
 - un único `aside.notes` por slide;
-- multas en 45–46;
-- `Casos` en 75;
-- `Gracias · preguntas` en 82;
+- multas en 42–43;
+- `Casos` en 72;
+- `Gracias · preguntas` en 79;
 - Speaker View muestra las mismas notas de `index.html`.
