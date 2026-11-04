@@ -50,12 +50,18 @@ El contenido numerado del curso no debe depender de eventos, temporizadores ni l
 
 Por petición del responsable del curso, se eliminaron las diapositivas originales 22, 25 y 42. La numeración pasa de 82 a 79. Se revisaron las notas históricas de los originales 2, 3, 5, 7, 10, 18 y 20, y las multas internacionales/españolas originales 45 y 46, con distinción de importes iniciales y firmeza procesal. Las notas siguen viviendo únicamente en `index.html`; no cambió el motor de presentación.
 
+## 2026-11-04 — Segunda depuración editorial: 79 → 73
+
+Se suprimieron las diapositivas **44, 50, 67, 69, 70 y 75 de la versión de 79**, sin alterar el motor ni el sistema de notas. La diapositiva de entrada a «Casos» (antes 72, ahora 67) se adaptó para retirar LOREG y reflejar los ejemplos restantes. La antigua diapositiva 76, ahora 70, mantiene una sola nota de ponente, solicitada literalmente: «contar lo de Netflix». También se corrigió en la nota de la LOPDGDD una referencia que prometía volver a un caso ya retirado.
+
 ## Pruebas de humo
 
-- 79 `section.slide-page`;
-- 79 títulos `data-title` únicos;
+- 73 `section.slide-page`;
+- 73 títulos `data-title` únicos;
 - un único `aside.notes` por slide;
 - multas en 42–43;
-- `Casos` en 72;
-- `Gracias · preguntas` en 79;
+- `Casos` en 67;
+- `Gracias · preguntas` en 73;
 - Speaker View muestra las mismas notas de `index.html`.
+- «Inteligencia artificial · llamadas de atención» es la 70, con una sola nota «contar lo de Netflix».
+- No existe el caso «LO 3/2018 y artículo 58 bis LOREG» ni figura en el índice de «Casos».

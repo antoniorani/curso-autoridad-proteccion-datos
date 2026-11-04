@@ -11,7 +11,7 @@ Cuando estén disponibles:
 
 El guion de revisión prevalece sobre el texto literal del PowerPoint cuando exista una corrección o actualización.
 
-El deck actual tiene **79 diapositivas**: las 80 del guion más dos slides docentes adicionales de multas, menos las tres diapositivas originales 22, 25 y 42 eliminadas por petición editorial.
+El deck actual tiene **73 diapositivas**: las 80 del guion, más dos slides docentes de multas, menos las tres retiradas en la primera depuración (22, 25 y 42 de la versión de 82) y seis retiradas en la segunda (44, 50, 67, 69, 70 y 75 de la versión de 79).
 
 ## 2. Criterio narrativo
 
@@ -19,9 +19,9 @@ Mantener el recorrido completo:
 
 - 1–20 · antecedentes históricos y evolución normativa;
 - 21–38 · marco legal y autoridades de control;
-- 39–48 · AEPD y sanciones;
-- 49–71 · CEPD, cooperación, herramientas e IMI;
-- 72–79 · casos, IA, neuroderechos, temas recientes y cierre.
+- 39–47 · AEPD y sanciones;
+- 48–66 · CEPD, cooperación, herramientas e IMI;
+- 67–73 · casos, IA, neuroderechos, temas recientes y cierre.
 
 No eliminar contenido solo porque parezca lateral al título del curso: conservar el hilo previsto y revisar especialmente vigencia, errores y elementos desactualizados.
 
@@ -71,6 +71,8 @@ Las notas son un **guion hablado**, no instrucciones internas del tipo «explica
 
 La numeración aparece únicamente en Speaker View.
 
+Excepción editorial puntual: la diapositiva actual **70 · Inteligencia artificial · llamadas de atención** conserva como única nota el punto literal «contar lo de Netflix», solicitado por el responsable del curso.
+
 ## 6. Diagramas SVG
 
 Los diagramas SVG creados para el curso deben usar `safe-diagram`.
@@ -88,7 +90,7 @@ Para textos que puedan desbordar:
 
 Hay una sola fuente de verdad por responsabilidad:
 
-- `index.html`: 79 slides y notas;
+- `index.html`: 73 slides y notas;
 - `style.css`: estilos propios del curso;
 - `assets/`: recursos propios;
 - `speaker-gallery.js`: copia sincronizada del motor común, sin contenido del curso.
@@ -107,13 +109,13 @@ El principio técnico es: **si puede resolverse con el HTML y CSS existentes, no
 
 Antes de cerrar una iteración estructural:
 
-1. existen exactamente **79** `section.slide-page`;
-2. los 79 `data-title` son únicos;
+1. existen exactamente **73** `section.slide-page`;
+2. los 73 `data-title` son únicos;
 3. cada slide tiene un único `aside.notes`;
 4. la 42 es «Principales multas RGPD internacionales»;
 5. la 43 es «Principales multas de la AEPD»;
-6. «Casos» es la 72;
-7. «Gracias · preguntas» es la 79;
+6. «Casos» es la 67;
+7. «Gracias · preguntas» es la 73;
 8. Speaker View muestra las notas de `index.html`;
 9. la vista pública no muestra número de diapositiva.
 
