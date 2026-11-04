@@ -11,17 +11,17 @@ Cuando estén disponibles:
 
 El guion de revisión prevalece sobre el texto literal del PowerPoint cuando exista una corrección o actualización.
 
-El deck actual tiene **82 diapositivas**: las 80 del guion más dos slides docentes adicionales de multas.
+El deck actual tiene **79 diapositivas**: las 80 del guion más dos slides docentes adicionales de multas, menos las tres diapositivas originales 22, 25 y 42 eliminadas por petición editorial.
 
 ## 2. Criterio narrativo
 
 Mantener el recorrido completo:
 
 - 1–20 · antecedentes históricos y evolución normativa;
-- 21–40 · marco legal y autoridades de control;
-- 41–51 · AEPD y sanciones;
-- 52–74 · CEPD, cooperación, herramientas e IMI;
-- 75–82 · casos, IA, neuroderechos, temas recientes y cierre.
+- 21–38 · marco legal y autoridades de control;
+- 39–48 · AEPD y sanciones;
+- 49–71 · CEPD, cooperación, herramientas e IMI;
+- 72–79 · casos, IA, neuroderechos, temas recientes y cierre.
 
 No eliminar contenido solo porque parezca lateral al título del curso: conservar el hilo previsto y revisar especialmente vigencia, errores y elementos desactualizados.
 
@@ -88,7 +88,7 @@ Para textos que puedan desbordar:
 
 Hay una sola fuente de verdad por responsabilidad:
 
-- `index.html`: 82 slides y notas;
+- `index.html`: 79 slides y notas;
 - `style.css`: estilos propios del curso;
 - `assets/`: recursos propios;
 - `speaker-gallery.js`: copia sincronizada del motor común, sin contenido del curso.
@@ -107,13 +107,13 @@ El principio técnico es: **si puede resolverse con el HTML y CSS existentes, no
 
 Antes de cerrar una iteración estructural:
 
-1. existen exactamente **82** `section.slide-page`;
-2. los 82 `data-title` son únicos;
+1. existen exactamente **79** `section.slide-page`;
+2. los 79 `data-title` son únicos;
 3. cada slide tiene un único `aside.notes`;
-4. la 45 es «Principales multas RGPD internacionales»;
-5. la 46 es «Principales multas de la AEPD»;
-6. «Casos» es la 75;
-7. «Gracias · preguntas» es la 82;
+4. la 42 es «Principales multas RGPD internacionales»;
+5. la 43 es «Principales multas de la AEPD»;
+6. «Casos» es la 72;
+7. «Gracias · preguntas» es la 79;
 8. Speaker View muestra las notas de `index.html`;
 9. la vista pública no muestra número de diapositiva.
 
